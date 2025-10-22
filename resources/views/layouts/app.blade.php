@@ -59,6 +59,7 @@
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md border-b border-secondary-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
+                <!-- LOGO -->
                 <a href="/" class="flex items-center gap-4">
                     <img src="/logo.jpg" alt="SAMDU AI Lab" class="h-14 w-14 rounded-lg shadow-md object-cover">
                     <div class="hidden md:block">
@@ -67,29 +68,33 @@
                     </div>
                 </a>
 
+                <!-- DESKTOP MENU -->
                 <div class="hidden md:flex items-center gap-2">
-                    <a href="/" class="px-4 py-2 rounded-md font-medium text-sm bg-primary-600 text-white shadow-sm"
+                    <a href="/"
+                        class="px-4 py-2 rounded-md font-medium text-sm text-secondary-700 hover:bg-primary-100 hover:text-primary-700"
                         data-key="nav.home">Home</a>
                     <a href="/about"
-                        class="px-4 py-2 rounded-md font-medium text-sm text-secondary-700 hover:bg-secondary-100"
+                        class="px-4 py-2 rounded-md font-medium text-sm text-secondary-700 hover:bg-primary-100 hover:text-primary-700"
                         data-key="nav.about">About</a>
                     <a href="/news"
-                        class="px-4 py-2 rounded-md font-medium text-sm text-secondary-700 hover:bg-secondary-100"
+                        class="px-4 py-2 rounded-md font-medium text-sm text-secondary-700 hover:bg-primary-100 hover:text-primary-700"
                         data-key="nav.news">News</a>
                     <a href="/projects"
-                        class="px-4 py-2 rounded-md font-medium text-sm text-secondary-700 hover:bg-secondary-100"
+                        class="px-4 py-2 rounded-md font-medium text-sm text-secondary-700 hover:bg-primary-100 hover:text-primary-700"
                         data-key="nav.projects">Projects</a>
                     <a href="/members"
-                        class="px-4 py-2 rounded-md font-medium text-sm text-secondary-700 hover:bg-secondary-100"
+                        class="px-4 py-2 rounded-md font-medium text-sm text-secondary-700 hover:bg-primary-100 hover:text-primary-700"
                         data-key="nav.members">Members</a>
 
-                    <!-- SELECT LANGUAGE -->
-                    <select id="langSelect" class="border rounded-md px-2 py-1" onchange="changeLang(this.value)">
-                        <option value="en">EN</option>
-                        <option value="uz">UZ</option>
+                    <!-- LANGUAGE SELECT -->
+                    <select id="langSelect" class="border-none bg-white/95 rounded-md px-2 py-1 font-medium text-sm"
+                        onchange="changeLang(this.value)">
+                        <option value="en">English</option>
+                        <option value="uz">O'zbek</option>
                     </select>
                 </div>
 
+                <!-- MOBILE MENU TOGGLE -->
                 <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg hover:bg-secondary-100 transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -99,22 +104,32 @@
             </div>
         </div>
 
+        <!-- MOBILE MENU -->
         <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-secondary-200">
             <div class="px-4 py-4 space-y-2">
-                <a href="/" class="block w-full text-left px-4 py-3 rounded-lg font-medium bg-primary-600 text-white"
+                <a href="/"
+                    class="block w-full text-left px-4 py-3 rounded-lg font-medium text-secondary-700 hover:bg-primary-100 hover:text-primary-700"
                     data-key="nav.home">Home</a>
                 <a href="/about"
-                    class="block w-full text-left px-4 py-3 rounded-lg font-medium text-secondary-700 hover:bg-secondary-100"
+                    class="block w-full text-left px-4 py-3 rounded-lg font-medium text-secondary-700 hover:bg-primary-100 hover:text-primary-700"
                     data-key="nav.about">About</a>
                 <a href="/news"
-                    class="block w-full text-left px-4 py-3 rounded-lg font-medium text-secondary-700 hover:bg-secondary-100"
+                    class="block w-full text-left px-4 py-3 rounded-lg font-medium text-secondary-700 hover:bg-primary-100 hover:text-primary-700"
                     data-key="nav.news">News</a>
                 <a href="/projects"
-                    class="block w-full text-left px-4 py-3 rounded-lg font-medium text-secondary-700 hover:bg-secondary-100"
+                    class="block w-full text-left px-4 py-3 rounded-lg font-medium text-secondary-700 hover:bg-primary-100 hover:text-primary-700"
                     data-key="nav.projects">Projects</a>
                 <a href="/members"
-                    class="block w-full text-left px-4 py-3 rounded-lg font-medium text-secondary-700 hover:bg-secondary-100"
+                    class="block w-full text-left px-4 py-3 rounded-lg font-medium text-secondary-700 hover:bg-primary-100 hover:text-primary-700"
                     data-key="nav.members">Members</a>
+
+                <!-- MOBILE LANGUAGE SELECT -->
+                <select id="langSelectMobile"
+                    class="border-none bg-white/95 rounded-md px-2 py-1 font-medium text-sm w-full"
+                    onchange="changeLang(this.value)">
+                    <option value="en">English</option>
+                    <option value="uz">O'zbek</option>
+                </select>
             </div>
         </div>
     </nav>
@@ -257,28 +272,21 @@
     <script src="/lang.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const menu = document.getElementById('mobileMenu');
-            const toggle = document.getElementById('mobileMenuToggle');
+            const mobileMenu = document.getElementById("mobileMenu");
+            const mobileToggle = document.getElementById("mobileMenuToggle");
 
-            toggle.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
+            mobileToggle.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
             });
 
-            const links = document.querySelectorAll('nav a[data-key]');
-            const mobileLinks = document.querySelectorAll('#mobileMenu a[data-key]');
+            const mobileLinks = mobileMenu.querySelectorAll("a[data-key]");
+            const desktopLinks = document.querySelectorAll("nav a[data-key]");
             const currentPath = window.location.pathname;
 
-            links.forEach(link => {
-                link.classList.remove('bg-primary-600', 'text-white');
-                if (link.getAttribute('href') === currentPath) {
-                    link.classList.add('bg-primary-600', 'text-white');
-                }
-            });
-
-            mobileLinks.forEach(link => {
-                link.classList.remove('bg-primary-600', 'text-white');
-                if (link.getAttribute('href') === currentPath) {
-                    link.classList.add('bg-primary-600', 'text-white');
+            [...mobileLinks, ...desktopLinks].forEach(link => {
+                link.classList.remove("bg-primary-600", "text-white");
+                if (link.getAttribute("href") === currentPath) {
+                    link.classList.add("bg-primary-600", "text-white");
                 }
             });
         });
