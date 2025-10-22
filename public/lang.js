@@ -591,4 +591,8 @@ function changeLang(lang) {
     applyLang(lang);
 }
 
-document.addEventListener("DOMContentLoaded", () => applyLang(currentLang));
+document.addEventListener("DOMContentLoaded", () =>{
+    const langSelect = document.getElementById("langSelect");
+    langSelect.value = currentLang;
+    applyLang(currentLang)
+});
