@@ -573,15 +573,36 @@ const translations = {
 };
 
 let currentLang = localStorage.getItem("lang") || "uz";
+const langElements = [];
+
+document.querySelectorAll("[data-key], [data-key-uz], [data-key-en]").forEach(el => {
+    langElements.push({
+        el: el,
+        keyPath: el.getAttribute("data-key") || null,
+        uz: el.getAttribute("data-key-uz") || null,
+        en: el.getAttribute("data-key-en") || null
+    });
+});
+
+const langSelect = document.getElementById("langSelect");
+if (langSelect) {
+    langSelect.value = currentLang;
+    langSelect.addEventListener("change", () => changeLang(langSelect.value));
+}
+
+applyLang(currentLang);
 
 function getTranslation(lang, keyPath) {
     return keyPath.split(".").reduce((obj, key) => obj?.[key], translations[lang]);
 }
 
 function applyLang(lang) {
-    document.querySelectorAll("[data-key]").forEach((el) => {
-        const key = el.getAttribute("data-key");
-        el.textContent = getTranslation(lang, key);
+    langElements.forEach(item => {
+        if (item[lang]) item.el.textContent = item[lang];
+        else if (item.keyPath) {
+            const text = getTranslation(lang, item.keyPath);
+            if (text !== undefined) item.el.textContent = text;
+        }
     });
 }
 
@@ -590,9 +611,3 @@ function changeLang(lang) {
     localStorage.setItem("lang", lang);
     applyLang(lang);
 }
-
-document.addEventListener("DOMContentLoaded", () =>{
-    const langSelect = document.getElementById("langSelect");
-    langSelect.value = currentLang;
-    applyLang(currentLang)
-});

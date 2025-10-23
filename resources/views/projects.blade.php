@@ -13,9 +13,8 @@
                 class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.05),transparent_50%)]">
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6" data-key="projects.title">Our Projects</h1>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6" data-key="projects.title"></h1>
                 <p class="text-xl max-w-3xl mx-auto opacity-95 leading-relaxed" data-key="projects.subtitle">
-                    Explore our cutting-edge research projects advancing the field of artificial intelligence
                 </p>
             </div>
         </section>
@@ -32,27 +31,22 @@
                     <button onclick="filterProjects(0)" data-category="0"
                         class="category-btn px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-lg scale-105"
                         data-key="projects.allProjects">
-                        All Projects
                     </button>
                     <button onclick="filterProjects(1)" data-category="1"
                         class="category-btn px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-secondary-700 hover:bg-primary-50 shadow border border-secondary-200 hover:border-primary-300"
                         data-key="projects.categories.1">
-                        Machine Learning
                     </button>
                     <button onclick="filterProjects(2)" data-category="2"
                         class="category-btn px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-secondary-700 hover:bg-primary-50 shadow border border-secondary-200 hover:border-primary-300"
                         data-key="projects.categories.2">
-                        Computer Vision
                     </button>
                     <button onclick="filterProjects(3)" data-category="3"
                         class="category-btn px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-secondary-700 hover:bg-primary-50 shadow border border-secondary-200 hover:border-primary-300"
                         data-key="projects.categories.3">
-                        NLP
                     </button>
                     <button onclick="filterProjects(4)" data-category="4"
                         class="category-btn px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-secondary-700 hover:bg-primary-50 shadow border border-secondary-200 hover:border-primary-300"
                         data-key="projects.categories.4">
-                        Robotics
                     </button>
                 </div>
 
@@ -75,14 +69,12 @@
                 class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.05),transparent_50%)]">
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <h2 class="text-4xl font-bold mb-6" data-key="projects.cta.title">Have a Project Idea?</h2>
+                <h2 class="text-4xl font-bold mb-6" data-key="projects.cta.title"></h2>
                 <p class="text-xl mb-8 max-w-2xl mx-auto leading-relaxed" data-key="projects.cta.subtitle">
-                    Let's collaborate on bringing innovative AI solutions to life
                 </p>
                 <button
                     class="px-10 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-all duration-300 hover:scale-105 shadow-xl"
                     data-key="projects.cta.button">
-                    Get Involved
                 </button>
             </div>
         </section>
@@ -195,28 +187,28 @@
             const grid = document.getElementById('projectsGrid');
 
             if (currentProjects.length === 0) {
-                grid.innerHTML = '<div class="col-span-full text-center py-16"><p class="text-secondary-500 text-lg" data-key="projects.noProjects">No projects found in this category</p></div>';
+                grid.innerHTML = '<div class="col-span-full text-center py-16"><p class="text-secondary-500 text-lg" data-key="projects.noProjects"></p></div>';
             } else {
                 grid.innerHTML = currentProjects.map(project => `
-                            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-secondary-200">
-                                <div class="relative h-56 overflow-hidden">
-                                    <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-                                    <div class="absolute top-4 right-4">
-                                        <span class="px-4 py-1 rounded-full text-sm font-semibold shadow-lg ${project.status === 'ongoing' ? 'bg-primary-600 text-white' : 'bg-primary-700 text-white'}">
-                                            ${project.status === 'ongoing' ? 'Ongoing' : 'Completed'}
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="p-6">
-                                    <div class="flex items-center justify-between mb-3">
-                                        <span class="text-sm font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full">${categoryNames[project.category]}</span>
-                                        <span class="text-sm text-secondary-500 font-medium">${formatDate(project.date)}</span>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-secondary-900 mb-3">${project.title}</h3>
-                                    <p class="text-secondary-600 mb-4 leading-relaxed text-sm">${project.description}</p>
-                                </div>
-                            </div>
-                        `).join('');
+                                            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-secondary-200">
+                                                <div class="relative h-56 overflow-hidden">
+                                                    <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                                                    <div class="absolute top-4 right-4">
+                                                        <span class="px-4 py-1 rounded-full text-sm font-semibold shadow-lg ${project.status === 'ongoing' ? 'bg-primary-600 text-white' : 'bg-primary-700 text-white'}">
+                                                            ${project.status === 'ongoing' ? 'Ongoing' : 'Completed'}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="p-6">
+                                                    <div class="flex items-center justify-between mb-3">
+                                                        <span class="text-sm font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full">${categoryNames[project.category]}</span>
+                                                        <span class="text-sm text-secondary-500 font-medium">${formatDate(project.date)}</span>
+                                                    </div>
+                                                    <h3 class="text-xl font-bold text-secondary-900 mb-3">${project.title}</h3>
+                                                    <p class="text-secondary-600 mb-4 leading-relaxed text-sm">${project.description}</p>
+                                                </div>
+                                            </div>
+                                        `).join('');
             }
 
             renderPagination(totalPages);
@@ -231,29 +223,29 @@
             }
 
             let html = `
-                        <button onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}
-                            class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed bg-white text-secondary-700 hover:bg-primary-50 shadow border border-secondary-200 hover:border-primary-300 disabled:hover:bg-white disabled:hover:border-secondary-200">
-                            Previous
-                        </button>
-                    `;
+                                        <button onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}
+                                            class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed bg-white text-secondary-700 hover:bg-primary-50 shadow border border-secondary-200 hover:border-primary-300 disabled:hover:bg-white disabled:hover:border-secondary-200">
+                                            Previous
+                                        </button>
+                                    `;
 
             for (let i = 1; i <= totalPages; i++) {
                 html += `
-                            <button onclick="changePage(${i})"
-                                class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${currentPage === i
+                                            <button onclick="changePage(${i})"
+                                                class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${currentPage === i
                         ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-lg scale-105'
                         : 'bg-white text-secondary-700 hover:bg-primary-50 shadow border border-secondary-200 hover:border-primary-300'}">
-                                ${i}
-                            </button>
-                        `;
+                                                ${i}
+                                            </button>
+                                        `;
             }
 
             html += `
-                        <button onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}
-                            class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed bg-white text-secondary-700 hover:bg-primary-50 shadow border border-secondary-200 hover:border-primary-300 disabled:hover:bg-white disabled:hover:border-secondary-200">
-                            Next
-                        </button>
-                    `;
+                                        <button onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}
+                                            class="px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed bg-white text-secondary-700 hover:bg-primary-50 shadow border border-secondary-200 hover:border-primary-300 disabled:hover:bg-white disabled:hover:border-secondary-200">
+                                            Next
+                                        </button>
+                                    `;
 
             pagination.innerHTML = html;
         }

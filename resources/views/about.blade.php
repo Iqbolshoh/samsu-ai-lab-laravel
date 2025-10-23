@@ -12,10 +12,8 @@
                 class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.05),transparent_50%)]">
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6" data-key="about.title">About Us</h1>
-                <p class="text-xl max-w-3xl mx-auto opacity-95 leading-relaxed" data-key="about.subtitle">
-                    Advancing AI research and education in Central Asia through innovation and collaboration
-                </p>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6" data-key="about.title"></h1>
+                <p class="text-xl max-w-3xl mx-auto opacity-95 leading-relaxed" data-key="about.subtitle"></p>
             </div>
         </section>
 
@@ -34,11 +32,8 @@
                                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-secondary-900 mb-4" data-key="about.mission.title">Our Mission
-                        </h3>
-                        <p class="text-secondary-600 leading-relaxed" data-key="about.mission.description">To advance the
-                            field of artificial intelligence through cutting-edge research, practical innovation, and
-                            education of the next generation of AI leaders</p>
+                        <h3 class="text-2xl font-bold text-secondary-900 mb-4" data-key="about.mission.title"></h3>
+                        <p class="text-secondary-600 leading-relaxed" data-key="about.mission.description"></p>
                     </div>
 
                     <div
@@ -52,10 +47,8 @@
                                     d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-secondary-900 mb-4" data-key="about.vision.title">Our Vision</h3>
-                        <p class="text-secondary-600 leading-relaxed" data-key="about.vision.description">To be a leading AI
-                            research hub in Central Asia, recognized globally for groundbreaking innovations and
-                            contributions to the field</p>
+                        <h3 class="text-2xl font-bold text-secondary-900 mb-4" data-key="about.vision.title"></h3>
+                        <p class="text-secondary-600 leading-relaxed" data-key="about.vision.description"></p>
                     </div>
 
                     <div
@@ -67,10 +60,8 @@
                                     d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-secondary-900 mb-4" data-key="about.excellence.title">Excellence
-                        </h3>
-                        <p class="text-secondary-600 leading-relaxed" data-key="about.excellence.description">Committed to
-                            the highest standards in research quality, academic integrity, and professional development</p>
+                        <h3 class="text-2xl font-bold text-secondary-900 mb-4" data-key="about.excellence.title"></h3>
+                        <p class="text-secondary-600 leading-relaxed" data-key="about.excellence.description"></p>
                     </div>
 
                     <div
@@ -82,10 +73,8 @@
                                     d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-secondary-900 mb-4" data-key="about.education.title">Education
-                        </h3>
-                        <p class="text-secondary-600 leading-relaxed" data-key="about.education.description">Nurturing
-                            talent and fostering a learning environment that encourages innovation and critical thinking</p>
+                        <h3 class="text-2xl font-bold text-secondary-900 mb-4" data-key="about.education.title"></h3>
+                        <p class="text-secondary-600 leading-relaxed" data-key="about.education.description"></p>
                     </div>
                 </div>
             </div>
@@ -99,14 +88,9 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="max-w-4xl mx-auto">
                     <h2 class="text-center text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent mb-8"
-                        data-key="about.story.title">Our Story</h2>
+                        data-key="about.story.title"></h2>
                     <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-secondary-200">
                         <p class="text-lg text-secondary-700 leading-relaxed" data-key="about.story.text">
-                            Founded in 2020, the SAMDU AI Laboratory has grown from a small research group into one of
-                            Central Asia's premier artificial intelligence research centers. Our team of dedicated
-                            researchers and students work on cutting-edge projects spanning machine learning, computer
-                            vision, natural language processing, and robotics. We collaborate with leading institutions
-                            worldwide and contribute to advancing AI technology for the benefit of society.
                         </p>
                     </div>
                 </div>
@@ -231,14 +215,12 @@
                 class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.05),transparent_50%)]">
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6" data-key="about.cta.title">Ready to Collaborate?</h2>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6" data-key="about.cta.title"></h2>
                 <p class="text-xl mb-10 max-w-2xl mx-auto leading-relaxed opacity-95" data-key="about.cta.subtitle">
-                    Join us in pushing the boundaries of artificial intelligence research
                 </p>
                 <button
                     class="px-10 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-all duration-300 hover:scale-105 shadow-xl"
                     data-key="projects.cta.button">
-                    Get Involved
                 </button>
             </div>
         </section>

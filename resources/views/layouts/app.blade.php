@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'SamSu AI Lab')</title>
 
+    <!-- Language Switcher -->
+    <script src="/lang.js" defer></script>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -87,11 +90,20 @@
                         data-key="nav.members">Members</a>
 
                     <!-- LANGUAGE SELECT -->
-                    <select id="langSelect" class="border-none bg-white/95 rounded-md px-2 py-1 font-medium text-sm"
-                        onchange="changeLang(this.value)">
-                        <option value="en">English</option>
-                        <option value="uz">O'zbek</option>
-                    </select>
+                    <div class="relative">
+                        <select id="langSelect"
+                            class="appearance-none bg-transparent rounded-lg px-4 py-2 font-medium text-sm text-secondary-700 hover:text-primary-700 cursor-pointer focus:outline-none transition-all duration-200 pr-10">
+                            <option value="en">English</option>
+                            <option value="uz">O'zbek</option>
+                        </select>
+                        <div
+                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-secondary-500">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- MOBILE MENU TOGGLE -->
@@ -124,12 +136,19 @@
                     data-key="nav.members">Members</a>
 
                 <!-- MOBILE LANGUAGE SELECT -->
-                <select id="langSelectMobile"
-                    class="border-none bg-white/95 rounded-md px-2 py-1 font-medium text-sm w-full"
-                    onchange="changeLang(this.value)">
-                    <option value="en">English</option>
-                    <option value="uz">O'zbek</option>
-                </select>
+                <div class="relative">
+                    <select id="langSelectMobile"
+                        class="appearance-none bg-transparent rounded-lg px-4 py-3 font-medium text-secondary-700 hover:text-primary-700 cursor-pointer focus:outline-none transition-all duration-200 pr-10 w-full">
+                        <option value="en">English</option>
+                        <option value="uz">O'zbek</option>
+                    </select>
+                    <div
+                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-secondary-500">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -268,9 +287,10 @@
         </div>
     </footer>
 
-
-    <script src="/lang.js"></script>
     <script>
+        /* =========================
+           MOBILE MENU TOGGLE
+           ========================= */
         document.addEventListener("DOMContentLoaded", () => {
             const mobileMenu = document.getElementById("mobileMenu");
             const mobileToggle = document.getElementById("mobileMenuToggle");
@@ -291,7 +311,6 @@
             });
         });
     </script>
-
 </body>
 
 </html>

@@ -12,10 +12,8 @@
                 class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.05),transparent_50%)]">
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6" data-key="members.title">Our Team</h1>
-                <p class="text-xl max-w-3xl mx-auto opacity-95 leading-relaxed" data-key="members.subtitle">
-                    Meet the talented researchers, engineers, and students driving AI innovation
-                </p>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6" data-key="members.title"></h1>
+                <p class="text-xl max-w-3xl mx-auto opacity-95 leading-relaxed" data-key="members.subtitle"></p>
             </div>
         </section>
 
@@ -24,10 +22,8 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent mb-4"
-                        data-key="members.leadership.title">Leadership & Researchers</h2>
-                    <p class="text-xl text-secondary-600 max-w-2xl mx-auto" data-key="members.leadership.subtitle">
-                        Our experienced team of AI researchers and academic leaders
-                    </p>
+                        data-key="members.leadership.title"></h2>
+                    <p class="text-xl text-secondary-600 max-w-2xl mx-auto" data-key="members.leadership.subtitle"></p>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -42,9 +38,8 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-secondary-900 mb-2">Dr. Alisher Rakhimov</h3>
                             <p class="text-primary-600 font-semibold mb-3 text-sm bg-primary-50 inline-block px-3 py-1 rounded-full"
-                                data-key="members.roles.director">Director</p>
-                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.0">Leading AI
-                                researcher with 15 years of experience in machine learning and computer vision</p>
+                                data-key="members.roles.director"></p>
+                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.0"></p>
                         </div>
                     </div>
 
@@ -59,9 +54,8 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-secondary-900 mb-2">Prof. Dilnoza Sharipova</h3>
                             <p class="text-primary-600 font-semibold mb-3 text-sm bg-primary-50 inline-block px-3 py-1 rounded-full"
-                                data-key="members.roles.seniorResearcher">Senior Researcher</p>
-                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.1">Expert in
-                                natural language processing with focus on Central Asian languages</p>
+                                data-key="members.roles.seniorResearcher"></p>
+                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.1"></p>
                         </div>
                     </div>
 
@@ -76,9 +70,8 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-secondary-900 mb-2">Dr. Bobur Karimov</h3>
                             <p class="text-primary-600 font-semibold mb-3 text-sm bg-primary-50 inline-block px-3 py-1 rounded-full"
-                                data-key="members.roles.leadEngineer">Lead Engineer</p>
-                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.2">Specialist in
-                                deep learning architectures and neural network optimization</p>
+                                data-key="members.roles.leadEngineer"></p>
+                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.2"></p>
                         </div>
                     </div>
 
@@ -93,9 +86,8 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-secondary-900 mb-2">Nigora Abdullayeva</h3>
                             <p class="text-primary-600 font-semibold mb-3 text-sm bg-primary-50 inline-block px-3 py-1 rounded-full"
-                                data-key="members.roles.researchScientist">Research Scientist</p>
-                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.3">Focused on
-                                computer vision applications in medical imaging and diagnostics</p>
+                                data-key="members.roles.researchScientist"></p>
+                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.3"></p>
                         </div>
                     </div>
 
@@ -108,11 +100,10 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-secondary-900 mb-2">Sardor Yusupov</h3>
+                            <h3 class="text-xl font-bold text-secondary-900 mb-2"></h3>
                             <p class="text-primary-600 font-semibold mb-3 text-sm bg-primary-50 inline-block px-3 py-1 rounded-full"
-                                data-key="members.roles.roboticsEngineer">Robotics Engineer</p>
-                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.4">Developing
-                                autonomous systems and intelligent robotics solutions</p>
+                                data-key="members.roles.roboticsEngineer"></p>
+                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.4"></p>
                         </div>
                     </div>
 
@@ -127,9 +118,8 @@
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-secondary-900 mb-2">Malika Tursunova</h3>
                             <p class="text-primary-600 font-semibold mb-3 text-sm bg-primary-50 inline-block px-3 py-1 rounded-full"
-                                data-key="members.roles.dataScientist">Data Scientist</p>
-                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.5">Expert in big
-                                data analytics and predictive modeling for AI applications</p>
+                                data-key="members.roles.dataScientist"></p>
+                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.5"></p>
                         </div>
                     </div>
                 </div>
@@ -151,32 +141,28 @@
                         </svg>
                     </div>
                     <h2 class="text-4xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent mb-4"
-                        data-key="members.students.title">Student Researchers</h2>
-                    <p class="text-xl text-secondary-600 max-w-2xl mx-auto mb-12" data-key="members.students.subtitle">
-                        Nurturing the next generation of AI innovators and researchers
-                    </p>
+                        data-key="members.students.title"></h2>
+                    <p class="text-xl text-secondary-600 max-w-2xl mx-auto mb-12" data-key="members.students.subtitle"> </p>
                 </div>
 
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                     <div
                         class="bg-white rounded-xl p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-secondary-200 hover:border-primary-300">
-                        <p class="text-lg font-semibold text-secondary-900" data-key="members.students.stats.masters">25+
-                            Master's Students</p>
+                        <p class="text-lg font-semibold text-secondary-900" data-key="members.students.stats.masters"></p>
                     </div>
                     <div
                         class="bg-white rounded-xl p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-secondary-200 hover:border-primary-300">
-                        <p class="text-lg font-semibold text-secondary-900" data-key="members.students.stats.doctoral">8
-                            Doctoral Candidates</p>
+                        <p class="text-lg font-semibold text-secondary-900" data-key="members.students.stats.doctoral"></p>
                     </div>
                     <div
                         class="bg-white rounded-xl p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-secondary-200 hover:border-primary-300">
                         <p class="text-lg font-semibold text-secondary-900" data-key="members.students.stats.undergraduate">
-                            50+ Undergraduate Researchers</p>
+                        </p>
                     </div>
                     <div
                         class="bg-white rounded-xl p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-secondary-200 hover:border-primary-300">
                         <p class="text-lg font-semibold text-secondary-900" data-key="members.students.stats.international">
-                            15 International Students</p>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -189,14 +175,11 @@
                 class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.05),transparent_50%)]">
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <h2 class="text-4xl font-bold mb-6" data-key="members.collaboration.title">Join Our Team</h2>
-                <p class="text-xl max-w-2xl mx-auto mb-8 leading-relaxed" data-key="members.collaboration.description">
-                    We're always looking for talented individuals passionate about AI research and innovation
-                </p>
+                <h2 class="text-4xl font-bold mb-6" data-key="members.collaboration.title"></h2>
+                <p class="text-xl max-w-2xl mx-auto mb-8 leading-relaxed" data-key="members.collaboration.description"></p>
                 <button
                     class="px-10 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-all duration-300 hover:scale-105 shadow-xl"
                     data-key="members.collaboration.button">
-                    Apply Now
                 </button>
             </div>
         </section>

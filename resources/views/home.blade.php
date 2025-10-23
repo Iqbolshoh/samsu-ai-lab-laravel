@@ -21,22 +21,20 @@
                     </div>
 
                     <h1 class="text-5xl md:text-7xl font-bold text-secondary-900 mb-6 leading-tight">
-                        <span data-key="home.title">Welcome to SAMDU</span>
+                        <span data-key="home.title"></span>
                         <span
                             class="block bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent mt-2"
-                            data-key="home.subtitle">AI Laboratory</span>
+                            data-key="home.subtitle"></span>
                     </h1>
 
                     <p class="text-xl md:text-2xl text-secondary-600 mb-10 max-w-3xl mx-auto leading-relaxed"
                         data-key="home.description">
-                        Pioneering artificial intelligence research and innovation in Central Asia
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
                         <a href="projects.html"
                             class="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl flex items-center justify-center gap-2"
                             data-key="home.exploreProjects">
-                            Explore Projects
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -46,7 +44,6 @@
                         <a href="about.html"
                             class="px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl border-2 border-primary-200"
                             data-key="home.learnMore">
-                            Learn More
                         </a>
                     </div>
                 </div>
@@ -60,7 +57,6 @@
                     <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent mb-4"
                         data-key="home.whatWeDo.title">What We Do</h2>
                     <p class="text-xl text-secondary-600 max-w-2xl mx-auto" data-key="home.whatWeDo.subtitle">
-                        Leading the future of artificial intelligence through research and innovation
                     </p>
                 </div>
 
@@ -75,9 +71,7 @@
                         </div>
                         <h3 class="text-2xl font-bold text-secondary-900 mb-3" data-key="home.whatWeDo.research.title">
                             Research Excellence</h3>
-                        <p class="text-secondary-600 leading-relaxed" data-key="home.whatWeDo.research.description">
-                            Conducting cutting-edge research in machine learning, computer vision, and natural language
-                            processing</p>
+                        <p class="text-secondary-600 leading-relaxed" data-key="home.whatWeDo.research.description"></p>
                     </div>
 
                     <div
@@ -89,9 +83,8 @@
                             </svg>
                         </div>
                         <h3 class="text-2xl font-bold text-secondary-900 mb-3" data-key="home.whatWeDo.innovation.title">
-                            Innovation & Development</h3>
+                        </h3>
                         <p class="text-secondary-600 leading-relaxed" data-key="home.whatWeDo.innovation.description">
-                            Creating practical AI solutions for real-world problems in education, healthcare, and industry
                         </p>
                     </div>
 
@@ -104,9 +97,9 @@
                             </svg>
                         </div>
                         <h3 class="text-2xl font-bold text-secondary-900 mb-3" data-key="home.whatWeDo.collaboration.title">
-                            Global Collaboration</h3>
+                        </h3>
                         <p class="text-secondary-600 leading-relaxed" data-key="home.whatWeDo.collaboration.description">
-                            Partnering with international institutions to advance AI research and knowledge sharing</p>
+                        </p>
                     </div>
 
                     <div
@@ -117,10 +110,8 @@
                                     d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-secondary-900 mb-3" data-key="home.whatWeDo.growth.title">Student
-                            Growth</h3>
-                        <p class="text-secondary-600 leading-relaxed" data-key="home.whatWeDo.growth.description">Mentoring
-                            the next generation of AI researchers and practitioners through hands-on experience</p>
+                        <h3 class="text-2xl font-bold text-secondary-900 mb-3" data-key="home.whatWeDo.growth.title"></h3>
+                        <p class="text-secondary-600 leading-relaxed" data-key="home.whatWeDo.growth.description"></p>
                     </div>
                 </div>
             </div>
@@ -134,15 +125,11 @@
             </div>
             <div class="relative z-10">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6" data-key="home.cta.title">Join Our Research Community
-                    </h2>
-                    <p class="text-xl mb-10 max-w-2xl mx-auto opacity-95" data-key="home.cta.description">
-                        Be part of groundbreaking AI research and innovation at Samarkand State University
-                    </p>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6" data-key="home.cta.title"></h2>
+                    <p class="text-xl mb-10 max-w-2xl mx-auto opacity-95" data-key="home.cta.description"></p>
                     <a href="members.html"
                         class="inline-block px-10 py-5 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-all duration-300 hover:scale-105 shadow-xl"
                         data-key="home.cta.button">
-                        Meet Our Team
                     </a>
                 </div>
             </div>
