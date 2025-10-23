@@ -13,4 +13,12 @@ class ProjectCategory extends Model
         'name_uz',
         'name_en',
     ];
+
+    /**
+     * Each category can have many projects.
+     */
+    public function projects()
+    {
+        return $this->hasMany(Project::class, 'project_category_id');
+    }
 }

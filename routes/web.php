@@ -1,6 +1,8 @@
 <?php
 
 use App\Models\News;
+use App\Models\Project;
+use App\Models\ProjectCategory;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', fn() => view('home'));
@@ -11,5 +13,17 @@ Route::get('/news', function () {
     return view('news', compact('news'));
 });
 
-Route::get('/projects', fn() => view('projects'));
+Route::get('/projects', function () {
+    $categories = ProjectCategory::orderBy('name_en')->get();
+    $query = Project::with('category');
+
+    if (request()->has('category') && request('category') !== '') {
+        $query->where('project_category_id', request('category'));
+    }
+
+    $projects = $query->latest()->paginate(6);
+
+    return view('projects', compact('categories', 'projects'));
+});
+
 Route::get('/members', fn() => view('members'));
