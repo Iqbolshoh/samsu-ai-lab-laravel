@@ -79,10 +79,6 @@ const translations = {
                     'Mustahkamlovchi o\'rganish',
                 ],
             },
-            story: {
-                title: 'Bizning tarixamiz',
-                text: 'Samarqand davlat universitetining texnologik taraqqiyotga sodiqligi doirasida tashkil etilgan sun\'iy intellekt laboratoriyamiz innovatsiya va mukammallik markaziga aylandi., Bizning fidoyi tadqiqotchilar va talabalar jamoamiz sun\'iy intellekt bilan nimalarga erishish mumkinligini kengaytiruvchi ilg\'or SI loyihalar ustida ishlaydi. Biz dunyo bo\'ylab etakchi muassasalar bilan hamkorlik qilamiz va global sun\'iy intellekt tadqiqot jamiyatiga hissa qo\'shamiz., Tadqiqotlarimiz, ta\'lim dasturlarimiz va sanoat hamkorliklarimiz orqali biz sun\'iy intellekt sohasiga muhim hissa qo\'shishni va O\'zbekiston va undan tashqarida sun\'iy intellekt liderlarining keyingi avlodini tarbiyalashni maqsad qilganmiz.',
-            },
             cta: {
                 title: 'Loyihalarimizni ko\'ring',
                 subtitle: 'Sun\'iy intellekt sohasidagi ilg\'or tadqiqot loyihalarimizni kashf eting va kelajak texnologiyalarini yaratishda bizga qo\'shiling',
@@ -365,10 +361,6 @@ const translations = {
                     'Reinforcement Learning',
                 ],
             },
-            story: {
-                title: 'Our Story',
-                text: 'Established as part of Samarkand State University\'s commitment to technological advancement, our AI Laboratory has grown into a hub of innovation and excellence in artificial intelligence research. Our team of dedicated researchers and students work on groundbreaking AI projects that push the boundaries of what\'s possible with AI. We collaborate with leading institutions worldwide and contribute to the global AI research community. Through our research, educational programs, and industry partnerships, we aim to make significant contributions to the field of artificial intelligence while fostering the next generation of AI leaders in Uzbekistan and beyond.',
-            },
             cta: {
                 title: 'Explore Our Projects',
                 subtitle: 'Discover our cutting-edge research initiatives in artificial intelligence and join us in shaping the future of technology',
@@ -598,8 +590,9 @@ function getTranslation(lang, keyPath) {
 
 function applyLang(lang) {
     langElements.forEach(item => {
-        if (item[lang]) item.el.textContent = item[lang];
-        else if (item.keyPath) {
+        if (item[lang]) {
+            item.el.innerHTML = item[lang];
+        } else if (item.keyPath) {
             const text = getTranslation(lang, item.keyPath);
             if (text !== undefined) item.el.textContent = text;
         }

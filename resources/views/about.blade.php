@@ -17,7 +17,7 @@
             </div>
         </section>
 
-        <!-- Story Section -->
+        <!-- About Section -->
         <section class="py-24 bg-gradient-to-b from-white to-primary-50 relative overflow-hidden">
             <div
                 class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(34,197,94,0.05),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.03),transparent_50%)]">
@@ -25,11 +25,10 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="max-w-4xl mx-auto">
                     <h2 class="text-center text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent mb-8"
-                        data-key="about.story.title"></h2>
-                    <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-secondary-200">
-                        <p class="text-lg text-secondary-700 leading-relaxed" data-key="about.story.text">
-                        </p>
-                    </div>
+                        data-key-en="{{ $about->title_en }}" data-key-uz="{{ $about->title_uz }}">
+                        {{ $about->title_en }}
+                    </h2>
+                    <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-secondary-200" data-key-uz="{!! nl2br(e($about->content_uz)) !!}" data-key-en="{!! nl2br(e($about->content_en)) !!}"></div>
                 </div>
             </div>
         </section>

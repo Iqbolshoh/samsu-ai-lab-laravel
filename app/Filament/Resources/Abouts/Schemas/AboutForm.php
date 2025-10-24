@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Abouts\Schemas;
 
+use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\RichEditor;
@@ -20,11 +21,13 @@ class AboutForm
                     ->label('Title (EN)')
                     ->required(),
 
-                RichEditor::make('content_uz')
+                Textarea::make('content_uz')
+                    ->rows(11)
                     ->label('Content (UZ)')
                     ->required(),
 
-                RichEditor::make('content_en')
+                Textarea::make('content_en')
+                    ->rows(11)
                     ->label('Content (EN)')
                     ->required(),
             ]);

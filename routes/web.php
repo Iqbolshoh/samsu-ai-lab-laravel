@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\About;
 use App\Models\Member;
 use App\Models\News;
 use App\Models\Project;
@@ -7,7 +8,11 @@ use App\Models\ProjectCategory;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', fn() => view('home'));
-Route::get('/about', fn() => view('about'));
+
+Route::get('/about', function () {
+    $about = About::first();
+    return view('about', compact('about'));
+});
 
 Route::get('/news', function () {
     $news = News::latest()->paginate(6);
