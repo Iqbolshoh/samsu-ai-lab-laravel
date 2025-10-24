@@ -18,6 +18,7 @@ class ProjectCategoryResource extends Resource
 {
     protected static ?string $model = ProjectCategory::class;
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedTag;
+    protected static ?int $navigationSort = 2;
 
     public static function form(Schema $schema): Schema
     {

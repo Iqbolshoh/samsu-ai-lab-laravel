@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\ProjectCategories\Tables;
 
+use Filament\Actions\DeleteAction;
 use Filament\Tables;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
@@ -38,11 +39,8 @@ class ProjectCategoriesTable
             ])
             ->recordActions([
                 EditAction::make(),
+                DeleteAction::make(),
             ])
-            ->toolbarActions([
-                BulkActionGroup::make([
-                    DeleteBulkAction::make(),
-                ]),
-            ]);
+            ->toolbarActions([]);
     }
 }

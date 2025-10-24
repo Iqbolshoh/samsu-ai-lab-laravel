@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\News\Tables;
 
+use Filament\Actions\DeleteAction;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Filament\Tables\Columns\ImageColumn;
@@ -47,6 +48,7 @@ class NewsTable
             ])
             ->recordActions([
                 EditAction::make(),
+                DeleteAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
