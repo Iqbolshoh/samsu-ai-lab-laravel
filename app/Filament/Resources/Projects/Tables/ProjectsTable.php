@@ -9,6 +9,7 @@ use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
+use Storage;
 
 class ProjectsTable
 {
@@ -54,7 +55,14 @@ class ProjectsTable
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
-                    DeleteBulkAction::make(),
+                    DeleteBulkAction::make()
+                        ->before(function ($records) {
+                            foreach ($records as $projects) {
+                                if ($projects->image && Storage::disk('public')->exists($projects->image)) {
+                                    Storage::disk('public')->delete($projects->image);
+                                }
+                            }
+                        }),
                 ]),
             ]);
     }

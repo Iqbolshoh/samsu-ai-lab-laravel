@@ -8,6 +8,7 @@ use Filament\Tables\Table;
 use Filament\Actions\EditAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
+use Storage;
 
 class MembersTable
 {
@@ -42,7 +43,14 @@ class MembersTable
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
-                    DeleteBulkAction::make(),
+                    DeleteBulkAction::make()
+                        ->before(function ($records) {
+                            foreach ($records as $members) {
+                                if ($members->image && Storage::disk('public')->exists($members->image)) {
+                                    Storage::disk('public')->delete($members->image);
+                                }
+                            }
+                        }),
                 ]),
             ]);
     }

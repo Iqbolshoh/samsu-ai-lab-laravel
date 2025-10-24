@@ -10,6 +10,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Actions\EditAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
+use Storage;
 
 class NewsTable
 {
@@ -52,7 +53,14 @@ class NewsTable
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
-                    DeleteBulkAction::make(),
+                    DeleteBulkAction::make()
+                        ->before(function ($records) {
+                            foreach ($records as $news) {
+                                if ($news->image && Storage::disk('public')->exists($news->image)) {
+                                    Storage::disk('public')->delete($news->image);
+                                }
+                            }
+                        }),
                 ]),
             ]);
     }
