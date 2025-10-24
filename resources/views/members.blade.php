@@ -14,9 +14,9 @@
                 <h1 class="text-5xl md:text-6xl font-bold mb-6" data-key-en="Our Team" data-key-uz="Bizning Jamoa">Our Team
                 </h1>
                 <p class="text-xl max-w-3xl mx-auto opacity-95 leading-relaxed"
-                    data-key-en="Meet the brilliant minds behind SamSU AI Lab 🚀"
-                    data-key-uz="SamSU AI Lab ortidagi zukko a’zolar bilan tanishing 🚀">
-                    Meet the brilliant minds behind SamSU AI Lab 🚀
+                    data-key-en="Meet the brilliant minds behind SamSU AI Lab"
+                    data-key-uz="SamSU AI Lab ortidagi zukko a’zolar bilan tanishing">
+                    Meet the brilliant minds behind SamSU AI Lab
                 </p>
             </div>
         </section>
@@ -70,7 +70,7 @@
                         </div>
                     @endforeach
                 </div>
-                
+
             </div>
         </section>
 

@@ -17,69 +17,6 @@
             </div>
         </section>
 
-        <!-- Values Section -->
-        <section class="py-24 bg-gradient-to-br from-primary-50 via-secondary-50 to-white relative overflow-hidden">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(34,197,94,0.08),transparent_50%)]">
-            </div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid md:grid-cols-2 gap-8 mb-20">
-                    <div
-                        class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-secondary-200 hover:border-primary-300">
-                        <div
-                            class="bg-gradient-to-br from-primary-50 to-secondary-50 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                            <svg class="text-primary-600 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-secondary-900 mb-4" data-key="about.mission.title"></h3>
-                        <p class="text-secondary-600 leading-relaxed" data-key="about.mission.description"></p>
-                    </div>
-
-                    <div
-                        class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-secondary-200 hover:border-primary-300">
-                        <div
-                            class="bg-gradient-to-br from-primary-50 to-secondary-50 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                            <svg class="text-primary-600 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-secondary-900 mb-4" data-key="about.vision.title"></h3>
-                        <p class="text-secondary-600 leading-relaxed" data-key="about.vision.description"></p>
-                    </div>
-
-                    <div
-                        class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-secondary-200 hover:border-primary-300">
-                        <div
-                            class="bg-gradient-to-br from-primary-50 to-secondary-50 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                            <svg class="text-primary-600 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-secondary-900 mb-4" data-key="about.excellence.title"></h3>
-                        <p class="text-secondary-600 leading-relaxed" data-key="about.excellence.description"></p>
-                    </div>
-
-                    <div
-                        class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-secondary-200 hover:border-primary-300">
-                        <div
-                            class="bg-gradient-to-br from-primary-50 to-secondary-50 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                            <svg class="text-primary-600 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-secondary-900 mb-4" data-key="about.education.title"></h3>
-                        <p class="text-secondary-600 leading-relaxed" data-key="about.education.description"></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Story Section -->
         <section class="py-24 bg-gradient-to-b from-white to-primary-50 relative overflow-hidden">
             <div
