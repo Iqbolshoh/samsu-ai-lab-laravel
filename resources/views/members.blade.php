@@ -3,7 +3,6 @@
 @section('title', 'SamSU AI Lab - Members')
 
 @section('content')
-
     <div class="min-h-screen pt-20 bg-gradient-to-b from-primary-50 to-white">
         <!-- Hero Section -->
         <section
@@ -12,159 +11,66 @@
                 class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.05),transparent_50%)]">
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6" data-key="members.title"></h1>
-                <p class="text-xl max-w-3xl mx-auto opacity-95 leading-relaxed" data-key="members.subtitle"></p>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6" data-key-en="Our Team" data-key-uz="Bizning Jamoa">Our Team
+                </h1>
+                <p class="text-xl max-w-3xl mx-auto opacity-95 leading-relaxed"
+                    data-key-en="Meet the brilliant minds behind SamSU AI Lab 🚀"
+                    data-key-uz="SamSU AI Lab ortidagi zukko a’zolar bilan tanishing 🚀">
+                    Meet the brilliant minds behind SamSU AI Lab 🚀
+                </p>
             </div>
         </section>
 
-        <!-- Leadership Section -->
+        <!-- Members Section -->
         <section class="py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent mb-4"
-                        data-key="members.leadership.title"></h2>
-                    <p class="text-xl text-secondary-600 max-w-2xl mx-auto" data-key="members.leadership.subtitle"></p>
+                        data-key-en="Leadership & Researchers" data-key-uz="Rahbariyat va Tadqiqotchilar">
+                        Leadership & Researchers
+                    </h2>
+                    <p class="text-xl text-secondary-600 max-w-2xl mx-auto"
+                        data-key-en="Dedicated professionals shaping the future of AI at Samarkand State University."
+                        data-key-uz="Sun’iy intellekt kelajagini shakllantirayotgan fidoyi mutaxassislar.">
+                        Dedicated professionals shaping the future of AI at Samarkand State University.
+                    </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div
-                        class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-secondary-200">
-                        <div class="relative h-72 overflow-hidden bg-gradient-to-br from-primary-50 to-secondary-50">
-                            <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=400"
-                                alt="Dr. Alisher Rakhimov"
-                                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-secondary-900 mb-2">Dr. Alisher Rakhimov</h3>
-                            <p class="text-primary-600 font-semibold mb-3 text-sm bg-primary-50 inline-block px-3 py-1 rounded-full"
-                                data-key="members.roles.director"></p>
-                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.0"></p>
-                        </div>
-                    </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                    @foreach ($members as $member)
+                        <div
+                            class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-secondary-200">
+                            <div class="relative h-72 overflow-hidden bg-gradient-to-br from-primary-50 to-secondary-50">
+                                @if ($member->image)
+                                    <img src="{{ asset('storage/' . $member->image) }}" alt="{{ $member->name_en }}"
+                                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                                @else
+                                    <img src="https://via.placeholder.com/400x400?text=No+Image" alt="{{ $member->name_en }}"
+                                        class="w-full h-full object-cover opacity-80">
+                                @endif
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                            </div>
 
-                    <div
-                        class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-secondary-200">
-                        <div class="relative h-72 overflow-hidden bg-gradient-to-br from-primary-50 to-secondary-50">
-                            <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400"
-                                alt="Prof. Dilnoza Sharipova"
-                                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-secondary-900 mb-2">Prof. Dilnoza Sharipova</h3>
-                            <p class="text-primary-600 font-semibold mb-3 text-sm bg-primary-50 inline-block px-3 py-1 rounded-full"
-                                data-key="members.roles.seniorResearcher"></p>
-                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.1"></p>
-                        </div>
-                    </div>
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-bold text-secondary-900 mb-2" data-key-en="{{ $member->name_en }}"
+                                    data-key-uz="{{ $member->name_uz }}">
+                                    {{ $member->name_en }}
+                                </h3>
 
-                    <div
-                        class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-secondary-200">
-                        <div class="relative h-72 overflow-hidden bg-gradient-to-br from-primary-50 to-secondary-50">
-                            <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400"
-                                alt="Dr. Bobur Karimov"
-                                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-secondary-900 mb-2">Dr. Bobur Karimov</h3>
-                            <p class="text-primary-600 font-semibold mb-3 text-sm bg-primary-50 inline-block px-3 py-1 rounded-full"
-                                data-key="members.roles.leadEngineer"></p>
-                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.2"></p>
-                        </div>
-                    </div>
+                                <p class="text-primary-600 font-semibold mb-3 text-sm bg-primary-50 inline-block px-3 py-1 rounded-full"
+                                    data-key-en="{{ $member->role_en }}" data-key-uz="{{ $member->role_uz }}">
+                                    {{ $member->role_en }}
+                                </p>
 
-                    <div
-                        class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-secondary-200">
-                        <div class="relative h-72 overflow-hidden bg-gradient-to-br from-primary-50 to-secondary-50">
-                            <img src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=400"
-                                alt="Nigora Abdullayeva"
-                                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                                <p class="text-secondary-600 text-sm leading-relaxed" data-key-en="{{ $member->bio_en }}"
+                                    data-key-uz="{{ $member->bio_uz }}">
+                                    {{ Str::limit($member->bio_en, 120) }}
+                                </p>
+                            </div>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-secondary-900 mb-2">Nigora Abdullayeva</h3>
-                            <p class="text-primary-600 font-semibold mb-3 text-sm bg-primary-50 inline-block px-3 py-1 rounded-full"
-                                data-key="members.roles.researchScientist"></p>
-                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.3"></p>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-secondary-200">
-                        <div class="relative h-72 overflow-hidden bg-gradient-to-br from-primary-50 to-secondary-50">
-                            <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=400"
-                                alt="Sardor Yusupov"
-                                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-secondary-900 mb-2"></h3>
-                            <p class="text-primary-600 font-semibold mb-3 text-sm bg-primary-50 inline-block px-3 py-1 rounded-full"
-                                data-key="members.roles.roboticsEngineer"></p>
-                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.4"></p>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-secondary-200">
-                        <div class="relative h-72 overflow-hidden bg-gradient-to-br from-primary-50 to-secondary-50">
-                            <img src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=400"
-                                alt="Malika Tursunova"
-                                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-secondary-900 mb-2">Malika Tursunova</h3>
-                            <p class="text-primary-600 font-semibold mb-3 text-sm bg-primary-50 inline-block px-3 py-1 rounded-full"
-                                data-key="members.roles.dataScientist"></p>
-                            <p class="text-secondary-600 text-sm leading-relaxed" data-key="members.bios.5"></p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-            </div>
-        </section>
-
-        <!-- Students Section -->
-        <section class="py-20 bg-white border-y border-secondary-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <div class="inline-block p-4 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl mb-6">
-                        <svg class="text-primary-600 w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 14l9-5-9-5-9 5 9 5z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
-                        </svg>
-                    </div>
-                    <h2 class="text-4xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent mb-4"
-                        data-key="members.students.title"></h2>
-                    <p class="text-xl text-secondary-600 max-w-2xl mx-auto mb-12" data-key="members.students.subtitle"> </p>
-                </div>
-
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                    <div
-                        class="bg-white rounded-xl p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-secondary-200 hover:border-primary-300">
-                        <p class="text-lg font-semibold text-secondary-900" data-key="members.students.stats.masters"></p>
-                    </div>
-                    <div
-                        class="bg-white rounded-xl p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-secondary-200 hover:border-primary-300">
-                        <p class="text-lg font-semibold text-secondary-900" data-key="members.students.stats.doctoral"></p>
-                    </div>
-                    <div
-                        class="bg-white rounded-xl p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-secondary-200 hover:border-primary-300">
-                        <p class="text-lg font-semibold text-secondary-900" data-key="members.students.stats.undergraduate">
-                        </p>
-                    </div>
-                    <div
-                        class="bg-white rounded-xl p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-secondary-200 hover:border-primary-300">
-                        <p class="text-lg font-semibold text-secondary-900" data-key="members.students.stats.international">
-                        </p>
-                    </div>
-                </div>
+                
             </div>
         </section>
 
@@ -175,15 +81,21 @@
                 class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.05),transparent_50%)]">
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <h2 class="text-4xl font-bold mb-6" data-key="members.collaboration.title"></h2>
-                <p class="text-xl max-w-2xl mx-auto mb-8 leading-relaxed" data-key="members.collaboration.description"></p>
-                <button
+                <h2 class="text-4xl font-bold mb-6" data-key-en="Join Our Vision"
+                    data-key-uz="Bizning G‘oyamizga Qo‘shiling">
+                    Join Our Vision
+                </h2>
+                <p class="text-xl max-w-2xl mx-auto mb-8 leading-relaxed"
+                    data-key-en="Be part of the next generation of innovators and researchers driving AI excellence in Uzbekistan 🇺🇿"
+                    data-key-uz="O‘zbekistonning kelajakdagi innovatorlari va tadqiqotchilari safida bo‘ling 🇺🇿">
+                    Be part of the next generation of innovators and researchers driving AI excellence in Uzbekistan 🇺🇿
+                </p>
+                <a href="/contact"
                     class="px-10 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-all duration-300 hover:scale-105 shadow-xl"
-                    data-key="members.collaboration.button">
-                </button>
+                    data-key-en="Contact Us" data-key-uz="Biz bilan bog‘laning">
+                    Contact Us
+                </a>
             </div>
         </section>
     </div>
-
-
 @endsection

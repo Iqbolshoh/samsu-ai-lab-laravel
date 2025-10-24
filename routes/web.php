@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Member;
 use App\Models\News;
 use App\Models\Project;
 use App\Models\ProjectCategory;
@@ -26,4 +27,7 @@ Route::get('/projects', function () {
     return view('projects', compact('categories', 'projects'));
 });
 
-Route::get('/members', fn() => view('members'));
+Route::get('/members', function () {
+    $members = Member::latest()->get();
+    return view('members', compact('members'));
+});
