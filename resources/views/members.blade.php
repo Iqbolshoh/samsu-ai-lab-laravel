@@ -11,7 +11,7 @@
             class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.05),transparent_50%)]">
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6" data-key-en="Our Team" data-key-uz="Bizning Jamoa">Our Team
+            <h1 class="text-5xl md:text-6xl font-bold mb-6" data-key-en="Our team" data-key-uz="Bizning jamoa">Our team
             </h1>
             <p class="text-xl max-w-3xl mx-auto opacity-95 leading-relaxed"
                 data-key-en="Meet the brilliant minds behind SamSU AI Lab"
@@ -26,8 +26,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent mb-4"
-                    data-key-en="Leadership & Researchers" data-key-uz="Rahbariyat va Tadqiqotchilar">
-                    Leadership & Researchers
+                    data-key-en="Leadership & Researchers" data-key-uz="Rahbariyat va tadqiqotchilar">
+                    Leadership & researchers
                 </h2>
                 <p class="text-xl text-secondary-600 max-w-2xl mx-auto"
                     data-key-en="Dedicated professionals shaping the future of AI at Samarkand State University."
@@ -82,8 +82,8 @@
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 class="text-4xl font-bold mb-6" data-key-en="Join Our Vision"
-                data-key-uz="Bizning G‘oyamizga Qo‘shiling">
-                Join Our Vision
+                data-key-uz="Bizning g‘oyamizga qo‘shiling">
+                Join our vision
             </h2>
             <p class="text-xl max-w-2xl mx-auto mb-8 leading-relaxed"
                 data-key-en="Be part of the next generation of innovators and researchers driving AI excellence in Uzbekistan"

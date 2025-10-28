@@ -38,8 +38,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent mb-4"
-                    data-key-en="Contact & Location" data-key-uz="Aloqa va Manzil">
-                    Contact & Location
+                    data-key-en="Contact & Location" data-key-uz="Aloqa va manzil">
+                    Contact & location
                 </h2>
                 <p class="text-xl text-secondary-600 max-w-2xl mx-auto leading-relaxed"
                     data-key-en="Visit us or get in touch to explore collaboration opportunities"

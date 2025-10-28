@@ -39,7 +39,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="projects.html"
+                    <a href="/projects"
                         class="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl flex items-center justify-center gap-2"
                         data-key="home.exploreProjects">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -48,7 +48,7 @@
                         </svg>
                     </a>
 
-                    <a href="about.html"
+                    <a href="/about"
                         class="px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl border-2 border-primary-200"
                         data-key="home.learnMore">
                     </a>
@@ -134,7 +134,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6" data-key="home.cta.title"></h2>
                 <p class="text-xl mb-10 max-w-2xl mx-auto opacity-95" data-key="home.cta.description"></p>
-                <a href="members.html"
+                <a href="/members"
                     class="inline-block px-10 py-5 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-all duration-300 hover:scale-105 shadow-xl"
                     data-key="home.cta.button">
                 </a>

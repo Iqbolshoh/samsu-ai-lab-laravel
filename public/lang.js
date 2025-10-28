@@ -49,7 +49,7 @@ const translations = {
             },
         },
         about: {
-            title: 'Bizning laboratoriya haqida',
+            title: 'Laboratoriya haqida',
             subtitle: 'Samarqand davlat universiteti sun\'iy intellekt laboratoriyasi sun\'iy intellekt tadqiqotlari va ta\'limini rivojlantirishga bag\'ishlangan.',
             mission: {
                 title: 'Missiyamiz',
@@ -336,7 +336,7 @@ const translations = {
             },
         },
         about: {
-            title: 'About Our Laboratory',
+            title: 'About Laboratory',
             subtitle: 'The Artificial Intelligence Laboratory at Samarkand State University is dedicated to advancing the frontiers of AI research and education.',
             mission: {
                 title: 'Our Mission',
