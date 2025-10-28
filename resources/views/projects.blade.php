@@ -10,7 +10,7 @@
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.05),transparent_50%)]"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h1 class="text-5xl md:text-6xl font-bold mb-6" data-key="projects.title"></h1>
-            <p class="text-xl max-w-3xl mx-auto opacity-95 leading-relaxed" data-key="projects.subtitle"></p>
+            <!-- <p class="text-xl max-w-3xl mx-auto opacity-95 leading-relaxed" data-key="projects.subtitle"></p> -->
         </div>
     </section>
 
@@ -100,7 +100,7 @@
             @endif
             @else
             <div class="text-center py-20 text-secondary-500">
-                <h3 class="text-xl font-semibold mb-2" data-key-uz="Loyihalar topilmadi 🧠" data-key-en="No projects found 🧠">
+                <h3 class="text-xl font-semibold mb-2" data-key-uz="Loyihalar topilmadi" data-key-en="No projects found">
                 </h3>
                 <p data-key-uz="Iltimos, keyinroq tekshirib ko‘ring." data-key-en="Please check back later."></p>
             </div>
@@ -109,7 +109,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white relative overflow-hidden">
+    <!-- <section class="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.05),transparent_50%)]"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 class="text-4xl md:text-5xl font-bold mb-6" data-key="projects.cta.title"></h2>
@@ -117,7 +117,6 @@
             <button class="px-10 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-all duration-300 hover:scale-105 shadow-xl"
                 data-key="projects.cta.button"></button>
         </div>
-    </section>
-
+    </section> -->
 </div>
 @endsection
