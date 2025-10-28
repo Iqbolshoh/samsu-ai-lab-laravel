@@ -64,10 +64,10 @@
             <div class="flex items-center justify-between h-20">
                 <!-- LOGO -->
                 <a href="/" class="flex items-center gap-4">
-                    <img src="/logo.jpg" alt="SAMDU AI Lab" class="h-14 w-14 rounded-lg shadow-md object-cover">
+                    <img src="/logo.png" alt="SAMDU AI Lab" class="h-14 w-14 rounded-lg shadow-md object-cover">
                     <div class="hidden md:block">
-                        <h1 class="text-lg font-bold text-secondary-900 tracking-tight">AI Laboratory</h1>
-                        <p class="text-xs text-secondary-600 font-medium">Samarkand State University</p>
+                        <h1 class="text-lg font-bold text-secondary-900 tracking-tight" data-key="nav.ai_lab">AI Laboratory</h1>
+                        <p class="text-xs text-secondary-600 font-medium" data-key="nav.university">Samarkand State University</p>
                     </div>
                 </a>
 
@@ -162,16 +162,18 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <img src="/logo.jpg" alt="SAMDU AI Lab"
+                        <img src="/logo.png" alt="SAMDU AI Lab"
                             class="h-14 w-14 rounded-lg object-cover shadow-lg border-2 border-primary-500/20">
                         <div>
-                            <h3 class="text-primary-500 font-bold text-lg">AI Laboratory</h3>
-                            <p class="text-sm text-white">Samarkand State University</p>
+                            <h3 class="text-primary-500 font-bold text-lg" data-key="nav.ai_lab">
+                                AI Laboratory
+                            </h3>
+                            <p class="text-sm text-white" data-key="nav.university">
+                                Samarkand State University
+                            </p>
                         </div>
                     </div>
                     <p class="text-sm text-secondary-400 leading-relaxed mb-4" data-key="footer.description">
-                        Leading research laboratory dedicated to advancing artificial intelligence and machine learning
-                        technologies in Central Asia.
                     </p>
                     <div class="flex gap-3 mt-6">
                         <a href="#"
@@ -246,33 +248,38 @@
                     <h4 class="text-white font-semibold mb-4 text-lg" data-key="footer.quickLinks">Quick Links</h4>
                     <ul class="space-y-3 text-sm">
                         <li>
-                            <a href="https://samdu.uz" target="_blank" rel="noopener noreferrer"
+                            <a
+                                href="https://samdu.uz/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 class="hover:text-primary-300 transition-colors flex items-center group">
                                 <span
                                     class="w-1.5 h-1.5 bg-primary-500 rounded-full mr-2 group-hover:bg-primary-300 transition-colors"></span>
-                                SamDU Official Website
+                                <span data-key="footer.official_website"></span>
                             </a>
                         </li>
+
                         <li>
-                            <a href="https://student.samdu.uz" target="_blank" rel="noopener noreferrer"
+                            <a
+                                href="https://itkt-samdu.uz/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 class="hover:text-primary-300 transition-colors flex items-center group">
                                 <span
                                     class="w-1.5 h-1.5 bg-primary-500 rounded-full mr-2 group-hover:bg-primary-300 transition-colors"></span>
-                                Student Portal
+                                <span data-key="footer.faculty_website"></span>
                             </a>
                         </li>
+
                         <li>
-                            <a href="#" class="hover:text-primary-300 transition-colors flex items-center group">
+                            <a
+                                href="https://it-markaz.samdu.uz/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="hover:text-primary-300 transition-colors flex items-center group">
                                 <span
                                     class="w-1.5 h-1.5 bg-primary-500 rounded-full mr-2 group-hover:bg-primary-300 transition-colors"></span>
-                                Research Publications
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:text-primary-300 transition-colors flex items-center group">
-                                <span
-                                    class="w-1.5 h-1.5 bg-primary-500 rounded-full mr-2 group-hover:bg-primary-300 transition-colors"></span>
-                                Academic Calendar
+                                <span data-key="footer.it_center"></span>
                             </a>
                         </li>
                     </ul>
@@ -280,7 +287,7 @@
             </div>
 
             <div class="mt-12 pt-8 border-t border-primary-800/50 text-center">
-                <p class="text-sm text-secondary-400" data-key="footer.copyright">© 2024 SAMDU AI Laboratory. All rights
+                <p class="text-sm text-secondary-400" data-key="footer.copyright">© 2025 SAMDU AI Laboratory. All rights
                     reserved.</p>
                 <p class="text-xs text-secondary-500 mt-2">Powered by Samarkand State University</p>
             </div>

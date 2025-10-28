@@ -7,11 +7,13 @@ const translations = {
             members: 'A\'zolar',
             news: 'Yangiliklar',
             achievements: 'Yutuqlar',
+            ai_lab: "SI laboratoriyasi",
+            university: "Samarqand davlat universiteti"
         },
         home: {
             title: 'Sun\'iy Intellekt',
             subtitle: 'Laboratoriyasi',
-            description: 'Samarqand davlat universitetida sun\'iy intellekt tadqiqotlari va innovatsiyalari',
+            description: 'Samarqand davlat universitetida sun\'iy intellekt labaratoriyasi',
             exploreProjects: 'SI Loyihalarni ko\'rish',
             learnMore: 'Batafsil',
             stats: {
@@ -85,7 +87,7 @@ const translations = {
             },
         },
         projects: {
-            title: 'Bizning SI loyihalar',
+            title: 'SI loyihalar',
             subtitle: 'Sun\'iy intellekt chegaralarini kengaytiruvchi ilg\'or tadqiqot SI loyihalarimizni kashf eting',
             filter: 'Filtr',
             allProjects: 'Barcha SI loyihalar',
@@ -279,6 +281,9 @@ const translations = {
             follow: 'Bizni kuzatib boring',
             address: 'Samarqand davlat universiteti, Samarqand, O\'zbekiston',
             copyright: '© 2025 Sun\'iy intellekt laboratoriyasi. Barcha huquqlar himoyalangan.',
+            official_website: "SamDU rasmiy sayti",
+            faculty_website: "Fakultet sayti",
+            it_center: "IT markazi"
         },
     },
     en: {
@@ -289,11 +294,13 @@ const translations = {
             members: 'Members',
             news: 'News',
             achievements: 'Achievements',
+            ai_lab: "AI Laboratory",
+            university: "Samarkand State University"
         },
         home: {
             title: 'Artificial Intelligence',
             subtitle: 'Laboratory',
-            description: 'Pioneering AI research and innovation at Samarkand State University',
+            description: 'Artificial Intelligence Laboratory at Samarkand State University',
             exploreProjects: 'Explore AI Projects',
             learnMore: 'Learn More',
             stats: {
@@ -367,7 +374,7 @@ const translations = {
             },
         },
         projects: {
-            title: 'Our AI Projects',
+            title: 'AI Projects',
             subtitle: 'Explore our cutting-edge research AI Projects that push the boundaries of artificial intelligence',
             filter: 'Filter',
             allProjects: 'All AI Projects',
@@ -560,6 +567,9 @@ const translations = {
             follow: 'Follow Us',
             address: 'Samarkand State University, Samarkand, Uzbekistan',
             copyright: '© 2025 AI Laboratory. All rights reserved.',
+            official_website: "SamDU Official Website",
+            faculty_website: "Faculty Website",
+            it_center: "IT Center"
         },
     },
 };
