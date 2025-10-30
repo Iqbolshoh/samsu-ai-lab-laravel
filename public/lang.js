@@ -23,7 +23,7 @@ const translations = {
                 partnerships: 'Hamkorliklar',
             },
             whatWeDo: {
-                title: 'Biz nima qilamiz',
+                title: 'Bizning faoliyat yo‘nalishlarimiz',
                 subtitle: 'Sun\'iy intellekt tadqiqotlari va ta\'limida etakchilik qilmoqdamiz',
                 research: {
                     title: 'Ilg\'or tadqiqot',
@@ -310,7 +310,7 @@ const translations = {
                 partnerships: 'Partnerships',
             },
             whatWeDo: {
-                title: 'What We Do',
+                title: 'Our areas of activity',
                 subtitle: 'Leading the way in artificial intelligence research and education',
                 research: {
                     title: 'Advanced Research',

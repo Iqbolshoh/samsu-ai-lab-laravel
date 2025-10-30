@@ -55,10 +55,10 @@
 
                         @if($project->url)
                         <a href="{{ $project->url }}"
-                            class="flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors text-sm group"
-                            data-key-uz="Ko‘proq o‘qish" data-key-en="Read More">
-                            Read More
-                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            class="flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors text-sm group">
+                            <span data-key="home.learnMore"></span>
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M13 7l5 5m0 0l-5 5m5-5H6" />
                             </svg>

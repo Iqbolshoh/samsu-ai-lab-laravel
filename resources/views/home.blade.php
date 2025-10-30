@@ -63,8 +63,6 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent mb-4"
                     data-key="home.whatWeDo.title">What We Do</h2>
-                <p class="text-xl text-secondary-600 max-w-2xl mx-auto" data-key="home.whatWeDo.subtitle">
-                </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
