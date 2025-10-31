@@ -55,6 +55,315 @@
             },
         }
     </script>
+
+    <style>
+        .prose_uz,
+        .prose_en {
+            font-family: "Inter", sans-serif;
+            line-height: 1.75;
+            color: #111827;
+            word-break: break-word;
+        }
+
+        .prose_uz h1,
+        .prose_en h1 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #14532d;
+            border-left: 4px solid #22c55e;
+            padding-left: 1rem;
+        }
+
+        .prose_uz h2,
+        .prose_en h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #166534;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #dcfce7;
+        }
+
+        .prose_uz h3,
+        .prose_en h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #15803d;
+        }
+
+        .prose_uz h4,
+        .prose_en h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            color: #16a34a;
+        }
+
+        .prose_uz p,
+        .prose_en p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: #374151;
+        }
+
+        .prose_uz ul,
+        .prose_en ul {
+            list-style-type: none;
+            margin-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        .prose_uz ul li,
+        .prose_en ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #374151;
+        }
+
+        .prose_uz ul li::before,
+        .prose_en ul li::before {
+            content: "•";
+            color: #22c55e;
+            font-weight: bold;
+            position: absolute;
+            left: 0.5rem;
+        }
+
+        .prose_uz ol,
+        .prose_en ol {
+            list-style-type: none;
+            counter-reset: list-counter;
+            margin-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        .prose_uz ol li,
+        .prose_en ol li {
+            counter-increment: list-counter;
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.5rem;
+            color: #374151;
+        }
+
+        .prose_uz ol li::before,
+        .prose_en ol li::before {
+            content: counter(list-counter) ".";
+            color: #22c55e;
+            font-weight: 600;
+            position: absolute;
+            left: 0.5rem;
+        }
+
+        .prose_uz img,
+        .prose_en img {
+            width: 100% !important;
+            height: auto;
+            border-radius: 0.75rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            display: block;
+            border: 2px solid #dcfce7;
+            box-shadow: 0 4px 6px -1px rgba(34, 197, 94, 0.1);
+        }
+
+        .prose_uz strong,
+        .prose_en strong {
+            font-weight: 600;
+            color: #15803d;
+            background-color: #f0fdf4;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+        }
+
+        .prose_uz em,
+        .prose_en em {
+            color: #16a34a;
+            font-style: italic;
+        }
+
+        .prose_uz a,
+        .prose_en a {
+            color: #16a34a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 2px solid #bbf7d0;
+            transition: all 0.2s ease;
+            padding: 0.125rem 0;
+        }
+
+        .prose_uz a:hover,
+        .prose_en a:hover {
+            color: #15803d;
+            border-bottom-color: #22c55e;
+            background-color: #f0fdf4;
+        }
+
+        .prose_uz table,
+        .prose_en table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            border: 1px solid #dcfce7;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 1px 3px 0 rgba(34, 197, 94, 0.1);
+        }
+
+        .prose_uz th,
+        .prose_en th,
+        .prose_uz td,
+        .prose_en td {
+            border: 1px solid #dcfce7;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .prose_uz th,
+        .prose_en th {
+            background-color: #f0fdf4;
+            font-weight: 600;
+            color: #14532d;
+            border-bottom: 2px solid #22c55e;
+        }
+
+        .prose_uz tr:nth-child(even),
+        .prose_en tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .prose_uz tr:hover,
+        .prose_en tr:hover {
+            background-color: #f0fdf4;
+        }
+
+        .prose_uz blockquote,
+        .prose_en blockquote {
+            border-left: 4px solid #22c55e;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #166534;
+            border-radius: 0 0.75rem 0.75rem 0;
+            position: relative;
+        }
+
+        .prose_uz blockquote::before,
+        .prose_en blockquote::before {
+            content: "" ";
+ font-size: 3rem;
+            color: #86efac;
+            position: absolute;
+            top: 0.5rem;
+            left: 1rem;
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .prose_uz code,
+        .prose_en code {
+            background-color: #f0fdf4;
+            color: #dc2626;
+            font-family: "Fira Code", monospace;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.375rem;
+            font-size: 0.9rem;
+            border: 1px solid #bbf7d0;
+            font-weight: 500;
+        }
+
+        .prose_uz pre,
+        .prose_en pre {
+            background: linear-gradient(135deg, #14532d 0%, #166534 100%);
+            color: #f0fdf4;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            font-family: "Fira Code", monospace;
+            font-size: 0.9rem;
+            border: 1px solid #22c55e;
+            box-shadow: 0 4px 6px -1px rgba(34, 197, 94, 0.2);
+        }
+
+        .prose_uz pre code,
+        .prose_en pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+            border: none;
+            font-weight: normal;
+        }
+
+        .prose_uz hr,
+        .prose_en hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, #22c55e 50%, transparent 100%);
+            margin: 2rem 0;
+        }
+
+        .prose_uz kbd,
+        .prose_en kbd {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 1px solid #86efac;
+            border-radius: 0.375rem;
+            box-shadow: 0 2px 4px rgba(34, 197, 94, 0.1);
+            color: #166534;
+            font-family: "Fira Code", monospace;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            font-weight: 600;
+        }
+
+        .prose_uz mark,
+        .prose_en mark {
+            background-color: #fef9c3;
+            color: #854d0e;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+        }
+
+        .prose_uz details,
+        .prose_en details {
+            background-color: #f8fafc;
+            border: 1px solid #dcfce7;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+
+        .prose_uz summary,
+        .prose_en summary {
+            padding: 1rem;
+            background-color: #f0fdf4;
+            color: #166534;
+            font-weight: 600;
+            cursor: pointer;
+            border-bottom: 1px solid #dcfce7;
+        }
+
+        .prose_uz details[open] summary,
+        .prose_en details[open] summary {
+            border-bottom: 1px solid #dcfce7;
+            background-color: #dcfce7;
+        }
+
+        .prose_uz details div,
+        .prose_en details div {
+            padding: 1rem;
+            background-color: white;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 font-sans flex flex-col min-h-screen">
@@ -67,8 +376,10 @@
                 <a href="/" class="flex items-center gap-4">
                     <img src="/logo.png" alt="SAMDU AI Lab" class="h-14 w-14 rounded-lg shadow-md object-cover">
                     <div class="hidden md:block">
-                        <h1 class="text-lg font-bold text-secondary-900 tracking-tight" data-key="nav.ai_lab">AI Laboratory</h1>
-                        <p class="text-xs text-secondary-600 font-medium" data-key="nav.university">Samarkand State University</p>
+                        <h1 class="text-lg font-bold text-secondary-900 tracking-tight" data-key="nav.ai_lab">AI
+                            Laboratory</h1>
+                        <p class="text-xs text-secondary-600 font-medium" data-key="nav.university">Samarkand State
+                            University</p>
                     </div>
                 </a>
 
@@ -249,10 +560,7 @@
                     <h4 class="text-white font-semibold mb-4 text-lg" data-key="footer.quickLinks">Quick Links</h4>
                     <ul class="space-y-3 text-sm">
                         <li>
-                            <a
-                                href="https://samdu.uz/"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <a href="https://samdu.uz/" target="_blank" rel="noopener noreferrer"
                                 class="hover:text-primary-300 transition-colors flex items-center group">
                                 <span
                                     class="w-1.5 h-1.5 bg-primary-500 rounded-full mr-2 group-hover:bg-primary-300 transition-colors"></span>
@@ -261,10 +569,7 @@
                         </li>
 
                         <li>
-                            <a
-                                href="https://itkt-samdu.uz/"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <a href="https://itkt-samdu.uz/" target="_blank" rel="noopener noreferrer"
                                 class="hover:text-primary-300 transition-colors flex items-center group">
                                 <span
                                     class="w-1.5 h-1.5 bg-primary-500 rounded-full mr-2 group-hover:bg-primary-300 transition-colors"></span>
@@ -273,10 +578,7 @@
                         </li>
 
                         <li>
-                            <a
-                                href="https://it-markaz.samdu.uz/"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <a href="https://it-markaz.samdu.uz/" target="_blank" rel="noopener noreferrer"
                                 class="hover:text-primary-300 transition-colors flex items-center group">
                                 <span
                                     class="w-1.5 h-1.5 bg-primary-500 rounded-full mr-2 group-hover:bg-primary-300 transition-colors"></span>

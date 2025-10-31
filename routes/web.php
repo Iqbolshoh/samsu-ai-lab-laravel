@@ -19,6 +19,11 @@ Route::get('/news', function () {
     return view('news', compact('news'));
 });
 
+Route::get('/news/{id}', function ($id) {
+    $news = News::findOrFail($id);
+    return view('news-show', compact('news'));
+});
+
 Route::get('/projects', function () {
     $categories = ProjectCategory::orderBy('name_en')->get();
     $query = Project::with('category');

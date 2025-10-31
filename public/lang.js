@@ -593,6 +593,7 @@ if (langSelect) {
 }
 
 applyLang(currentLang);
+toggleProse(currentLang);
 
 function getTranslation(lang, keyPath) {
     return keyPath.split(".").reduce((obj, key) => obj?.[key], translations[lang]);
@@ -613,4 +614,20 @@ function changeLang(lang) {
     currentLang = lang;
     localStorage.setItem("lang", lang);
     applyLang(lang);
+    toggleProse(lang);
+}
+
+function toggleProse(lang) {
+    const proseUz = document.querySelector(".prose_uz");
+    const proseEn = document.querySelector(".prose_en");
+
+    if (proseUz && proseEn) {
+        if (lang === "uz") {
+            proseUz.style.display = "block";
+            proseEn.style.display = "none";
+        } else if (lang === "en") {
+            proseUz.style.display = "none";
+            proseEn.style.display = "block";
+        }
+    }
 }
