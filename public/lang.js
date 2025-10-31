@@ -7,7 +7,7 @@ const translations = {
             members: 'A\'zolar',
             news: 'Yangiliklar',
             achievements: 'Yutuqlar',
-            ai_lab: "SI laboratoriyasi",
+            ai_lab: "SI Laboratoriyasi",
             university: "Samarqand davlat universiteti"
         },
         home: {
