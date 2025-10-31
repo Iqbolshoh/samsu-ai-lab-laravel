@@ -17,7 +17,6 @@ return new class extends Migration {
             $table->text('content_uz');
             $table->text('content_en');
             $table->string('image')->nullable();
-            $table->string('url')->nullable();
             $table->timestamps();
         });
     }

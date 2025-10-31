@@ -41,11 +41,11 @@
                     data-key-en="Contact & Location" data-key-uz="Aloqa va manzil">
                     Contact & location
                 </h2>
-                <p class="text-xl text-secondary-600 max-w-2xl mx-auto leading-relaxed"
+                <!-- <p class="text-xl text-secondary-600 max-w-2xl mx-auto leading-relaxed"
                     data-key-en="Visit us or get in touch to explore collaboration opportunities"
                     data-key-uz="Biz bilan bog'laning yoki hamkorlik imkoniyatlarini o‘rganing">
                     Visit us or get in touch to explore collaboration opportunities
-                </p>
+                </p> -->
             </div>
 
             <div class="grid lg:grid-cols-2 gap-12">

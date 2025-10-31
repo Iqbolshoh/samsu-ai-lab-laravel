@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\News\Schemas;
 
 use Filament\Forms;
+use Filament\Forms\Components\RichEditor;
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
@@ -28,30 +29,20 @@ class NewsForm
                             ->maxLength(255),
                     ]),
 
-                \Filament\Schemas\Components\Grid::make(2)
-                    ->schema([
-                        Textarea::make('content_uz')
-                            ->label('Content (UZ)')
-                            ->rows(6)
-                            ->required(),
-
-                        Textarea::make('content_en')
-                            ->label('Content (EN)')
-                            ->rows(6)
-                            ->required(),
-                    ]),
-
                 FileUpload::make('image')
                     ->label('Image')
                     ->directory('news')
                     ->image()
                     ->imageEditor()
-                    ->maxSize(2048),
+                    ->maxSize(5120),
 
-                TextInput::make('url')
-                    ->label('Custom URL (optional)')
-                    ->placeholder('example: /news/my-latest-article')
-                    ->nullable(),
+                RichEditor::make('content_uz')
+                    ->label('Content (UZ)')
+                    ->required(),
+
+                RichEditor::make('content_en')
+                    ->label('Content (EN)')
+                    ->required()
             ]);
     }
 }
