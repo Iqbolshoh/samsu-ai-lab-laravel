@@ -567,7 +567,7 @@ const translations = {
             follow: 'Follow Us',
             address: 'Samarkand State University, Samarkand, Uzbekistan',
             copyright: '© 2025 AI Laboratory. All rights reserved.',
-            official_website: "SamDU Official Website",
+            official_website: "SamSU Official Website",
             faculty_website: "Faculty Website",
             it_center: "IT Center"
         },

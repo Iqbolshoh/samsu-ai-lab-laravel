@@ -45,3 +45,7 @@ Route::get('/members', function () {
     $members = Member::latest()->get();
     return view('members', compact('members'));
 });
+
+Route::fallback(function () {
+    return response()->view('404', [], 404);
+});
