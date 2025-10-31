@@ -5,9 +5,13 @@ use App\Models\Member;
 use App\Models\News;
 use App\Models\Project;
 use App\Models\ProjectCategory;
+use App\Models\Activity;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', fn() => view('home'));
+Route::get('/', function () {
+    $activities = Activity::latest()->take(6)->get();
+    return view('home', compact('activities'));
+});
 
 Route::get('/about', function () {
     $about = About::first();
