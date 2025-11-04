@@ -67,7 +67,7 @@
             <div class="flex items-center justify-between h-20">
                 <!-- LOGO -->
                 <a href="/" class="flex items-center gap-4">
-                    <img src="/logo.png" alt="SAMDU AI Lab" class="h-14 w-14 rounded-lg shadow-md object-cover">
+                    <img src="/logo.jpg" alt="SAMDU AI Lab" class="h-14 w-14 rounded-lg shadow-md object-cover">
                     <div class="hidden md:block">
                         <h1 class="text-lg font-bold text-secondary-900 tracking-tight" data-key="nav.ai_lab">AI
                             Laboratory</h1>
@@ -167,7 +167,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <img src="/logo.png" alt="SAMDU AI Lab"
+                        <img src="/logo.jpg" alt="SAMDU AI Lab"
                             class="h-14 w-14 rounded-lg object-cover shadow-lg border-2 border-primary-500/20">
                         <div>
                             <h3 class="text-primary-500 font-bold text-lg" data-key="nav.ai_lab">

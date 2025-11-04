@@ -24,7 +24,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
                 <div class="text-center">
                     <div class="flex justify-center mb-8">
-                        <img src="/logo.png" alt="SAMDU AI Lab" class="h-32 w-32 rounded-xl shadow-2xl object-cover">
+                        <img src="/logo.jpg" alt="SAMDU AI Lab" class="h-32 w-32 rounded-xl shadow-2xl object-cover">
                     </div>
 
                     <h1 class="text-5xl md:text-7xl font-bold text-secondary-900 mb-6 leading-tight">
