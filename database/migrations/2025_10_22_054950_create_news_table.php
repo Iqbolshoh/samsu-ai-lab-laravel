@@ -12,6 +12,7 @@ return new class extends Migration {
     {
         Schema::create('news', function (Blueprint $table) {
             $table->id();
+            $table->enum('type', ['news', 'announcement'])->default('news');
             $table->string('title_uz');
             $table->string('title_en');
             $table->text('content_uz');

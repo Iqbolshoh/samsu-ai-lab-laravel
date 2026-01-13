@@ -22,7 +22,13 @@ Route::get('/about', function () {
 
 // News listing
 Route::get('/news', function () {
-    $news = News::latest()->paginate(6);
+    $query = News::latest();
+
+    if (request()->has('type') && in_array(request('type'), ['news', 'announcement'])) {
+        $query->where('type', request('type'));
+    }
+
+    $news = $query->paginate(6);
     return view('news', compact('news'));
 });
 
