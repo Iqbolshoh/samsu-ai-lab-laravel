@@ -69,8 +69,7 @@
                 <a href="/" class="flex items-center gap-4">
                     <img src="/logo.jpg" alt="SAMDU AI Lab" class="h-14 w-14 rounded-lg shadow-md object-cover">
                     <div class="hidden md:block">
-                        <h1 class="text-lg font-bold text-secondary-900 tracking-tight" data-key="nav.ai_lab">AI
-                            Laboratory</h1>
+                        <h1 class="text-lg font-bold text-secondary-900 tracking-tight" data-key="nav.ai_lab">Artificial Intelligence Laboratory</h1>
                         <p class="text-xs text-secondary-600 font-medium" data-key="nav.university">Samarkand State
                             University</p>
                     </div>

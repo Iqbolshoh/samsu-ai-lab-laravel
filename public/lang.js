@@ -3,11 +3,11 @@ const translations = {
         nav: {
             home: 'Bosh sahifa',
             about: 'Biz haqimizda',
-            projects: 'SI Loyihalar',
+            projects: 'Loyihalar',
             members: 'A\'zolar',
             news: 'Yangiliklar',
             achievements: 'Yutuqlar',
-            ai_lab: "SI Laboratoriyasi",
+            ai_lab: "Sun’iy intellekt laboratoriyasi",
             university: "Samarqand davlat universiteti"
         },
         home: {
@@ -87,7 +87,7 @@ const translations = {
             },
         },
         projects: {
-            title: 'SI loyihalar',
+            title: 'Loyihalar',
             subtitle: 'Sun\'iy intellekt chegaralarini kengaytiruvchi ilg\'or tadqiqot SI loyihalarimizni kashf eting',
             filter: 'Filtr',
             allProjects: 'Barcha SI loyihalar',
@@ -175,7 +175,7 @@ const translations = {
             },
         },
         news: {
-            title: 'Yangiliklar',
+            title: 'Yangiliklar va e’lonlar',
             subtitle: 'Sun\'iy intellekt laboratoriyasidagi so\'nggi yangiliklar, tadbirlar va yutuqlar bilan tanishing',
             readMore: 'Batafsil',
             categories: {
@@ -290,11 +290,11 @@ const translations = {
         nav: {
             home: 'Home',
             about: 'About',
-            projects: 'AI Projects',
+            projects: 'Projects',
             members: 'Members',
             news: 'News',
             achievements: 'Achievements',
-            ai_lab: "AI Laboratory",
+            ai_lab: "Artificial Intelligence Laboratory",
             university: "Samarkand State University"
         },
         home: {
@@ -374,7 +374,7 @@ const translations = {
             },
         },
         projects: {
-            title: 'AI Projects',
+            title: 'Projects',
             subtitle: 'Explore our cutting-edge research AI Projects that push the boundaries of artificial intelligence',
             filter: 'Filter',
             allProjects: 'All AI Projects',
@@ -468,7 +468,7 @@ const translations = {
             },
         },
         news: {
-            title: 'News',
+            title: 'News and Announcements',
             subtitle: 'Stay updated with the latest news, events, and achievements from our AI Laboratory',
             readMore: 'Read More',
             items: [
