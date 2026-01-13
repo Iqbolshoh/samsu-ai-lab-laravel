@@ -63,6 +63,36 @@
             </div>
             @endif
 
+            <!-- Pagination -->
+            @if ($members->hasPages())
+            <div class="mt-12 flex justify-center">
+                <nav class="flex items-center space-x-2">
+                    @if ($members->onFirstPage())
+                    <span class="px-4 py-2 text-sm font-medium text-gray-400 bg-gray-100 border border-gray-300 rounded-md cursor-not-allowed">« Prev</span>
+                    @else
+                    <a href="{{ $members->previousPageUrl() }}"
+                        class="px-4 py-2 text-sm font-medium text-primary-600 bg-white border border-primary-300 rounded-md hover:bg-primary-50">« Prev</a>
+                    @endif
+
+                    @foreach ($members->getUrlRange(1, $members->lastPage()) as $page => $url)
+                    @if ($page == $members->currentPage())
+                    <span class="px-4 py-2 text-sm font-semibold bg-primary-600 text-white border border-primary-600 rounded-md">{{ $page }}</span>
+                    @else
+                    <a href="{{ $url }}"
+                        class="px-4 py-2 text-sm font-medium text-primary-600 bg-white border border-primary-300 rounded-md hover:bg-primary-50">{{ $page }}</a>
+                    @endif
+                    @endforeach
+
+                    @if ($members->hasMorePages())
+                    <a href="{{ $members->nextPageUrl() }}"
+                        class="px-4 py-2 text-sm font-medium text-primary-600 bg-white border border-primary-300 rounded-md hover:bg-primary-50">Next »</a>
+                    @else
+                    <span class="px-4 py-2 text-sm font-medium text-gray-400 bg-gray-100 border border-gray-300 rounded-md cursor-not-allowed">Next »</span>
+                    @endif
+                </nav>
+            </div>
+            @endif
+
         </div>
     </section>
 </div>

@@ -48,7 +48,7 @@ Route::get('/projects', function () {
 
 // Members listing
 Route::get('/members', function () {
-    $members = Member::latest()->get();
+    $members = Member::latest()->paginate(6);
     return view('members', compact('members'));
 });
 
