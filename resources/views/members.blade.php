@@ -11,8 +11,7 @@
             class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.05),transparent_50%)]">
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6" data-key-en="Researchers" data-key-uz="Tadqiqotchilar">Our team
-            </h1>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6" data-key-en="Researchers" data-key-uz="Tadqiqotchilar">Our team</h1>
         </div>
     </section>
 
@@ -30,7 +29,7 @@
                         <img src="{{ asset('storage/' . $member->image) }}" alt="{{ $member->name_en }}"
                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
                         @else
-                        <img src="https://via.placeholder.com/400x400?text=No+Image" alt="{{ $member->name_en }}"
+                        <img src="https://placehold.co/800x400?text=No+Image" alt="{{ $member->name_en }}"
                             class="w-full h-full object-cover opacity-80">
                         @endif
                         <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
