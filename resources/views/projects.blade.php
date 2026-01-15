@@ -24,7 +24,7 @@
                 @foreach ($projects as $project)
                 <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-secondary-200">
                     <div class="relative h-56 overflow-hidden">
-                        <img src="{{ $project->image ? asset('storage/'.$project->image) : 'https://placehold.co/800x400?text=No+Image' }}"
+                        <img src="{{ $project->image ? (str_starts_with($project->image, 'http') ? $project->image : asset('storage/'.$project->image))  : 'https://placehold.co/1920x1080?text=No+Image' }}"
                             alt="{{ $project->title_en }}"
                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
                     </div>

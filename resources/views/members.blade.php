@@ -26,7 +26,7 @@
                     class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-secondary-200">
                     <div class="relative h-72 overflow-hidden bg-gradient-to-br from-primary-50 to-secondary-50">
                         @if ($member->image)
-                        <img src="{{ asset('storage/' . $member->image) }}" alt="{{ $member->name_en }}"
+                        <img src="{{ $member->image ? (str_starts_with($member->image, 'http') ? $member->image : asset('storage/'.$member->image))  : 'https://placehold.co/1920x1080?text=No+Image' }}"
                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
                         @else
                         <img src="https://placehold.co/800x400?text=No+Image" alt="{{ $member->name_en }}"

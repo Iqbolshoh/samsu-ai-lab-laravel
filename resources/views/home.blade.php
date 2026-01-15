@@ -12,7 +12,7 @@
                     @foreach($banners as $index => $banner)
                     <div class="swiper-slide">
                         <div class="absolute inset-0">
-                            <img src="{{ $banner->image ? asset('storage/'.$banner->image) : 'https://placehold.co/1200x600?text=No+Image' }}"
+                            <img src="{{ $banner->image ? (str_starts_with($banner->image, 'http') ? $banner->image : asset('storage/'.$banner->image))  : 'https://placehold.co/1920x1080?text=No+Image' }}"
                                 class="w-full h-full object-cover"
                                 alt="{{ $banner->title_uz }}">
                             <div class="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-primary-900/60"></div>

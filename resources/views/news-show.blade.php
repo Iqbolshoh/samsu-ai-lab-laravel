@@ -49,7 +49,7 @@
             <figure class="mb-10">
                 <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-secondary-200">
                     <img id="articleImage"
-                        src="{{ $news->image ? asset('storage/' . $news->image) : 'https://placehold.co/800x400?text=No+Image' }}"
+                        src="{{ $news->image ? (str_starts_with($news->image, 'http') ? $news->image : asset('storage/'.$news->image))  : 'https://placehold.co/1920x1080?text=No+Image' }}"
                         alt="{{ $news->title_en }}"
                         class="w-full h-auto object-cover">
                 </div>

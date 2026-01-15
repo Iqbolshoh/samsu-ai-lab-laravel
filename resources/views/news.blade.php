@@ -26,7 +26,7 @@
                 <div
                     class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-secondary-200">
                     <div class="relative h-56 overflow-hidden">
-                        <img src="{{ $item->image ? asset('storage/' . $item->image) : 'https://placehold.co/800x400?text=No+Image' }}"
+                        <img src="{{ $item->image ? (str_starts_with($item->image, 'http') ? $item->image : asset('storage/'.$item->image))  : 'https://placehold.co/1920x1080?text=No+Image' }}"
                             class="w-full h-full object-cover" alt="{{ $item->title_en }}"
                             data-key-uz="{{ $item->title_uz }}" data-key-en="{{ $item->title_en }}">
                     </div>
