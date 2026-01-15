@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'SamSU AI Lab - News')
+@section('title', 'AI Laboratory | News')
 
 @section('content')
 

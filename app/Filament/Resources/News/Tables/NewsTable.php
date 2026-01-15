@@ -3,14 +3,13 @@
 namespace App\Filament\Resources\News\Tables;
 
 use Filament\Actions\DeleteAction;
-use Filament\Tables;
 use Filament\Tables\Table;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Actions\EditAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
-use Storage;
+use Illuminate\Support\Facades\Storage;
 
 class NewsTable
 {
@@ -20,8 +19,19 @@ class NewsTable
             ->columns([
                 ImageColumn::make('image')
                     ->label('Image')
+                    ->disk('public')
                     ->circular()
                     ->size(60),
+
+                TextColumn::make('type')
+                    ->label('Type')
+                    ->badge()
+                    ->colors([
+                        'primary' => 'news',
+                        'warning' => 'announcement',
+                    ])
+                    ->formatStateUsing(fn($state) => ucfirst($state))
+                    ->sortable(),
 
                 TextColumn::make('title_uz')
                     ->label('Title (UZ)')
@@ -45,8 +55,7 @@ class NewsTable
                     ->dateTime('d M Y, H:i')
                     ->sortable(),
             ])
-            ->filters([
-            ])
+            ->filters([])
             ->recordActions([
                 EditAction::make(),
                 DeleteAction::make(),

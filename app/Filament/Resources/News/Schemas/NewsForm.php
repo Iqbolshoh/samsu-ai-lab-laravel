@@ -2,12 +2,12 @@
 
 namespace App\Filament\Resources\News\Schemas;
 
-use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Select;
+use Filament\Schemas\Components\Grid;
 
 class NewsForm
 {
@@ -16,7 +16,16 @@ class NewsForm
         return $schema
             ->columns(1)
             ->components([
-                \Filament\Schemas\Components\Grid::make(2)
+                Select::make('type')
+                    ->label('Type')
+                    ->options([
+                        'news' => 'News',
+                        'announcement' => 'Announcement',
+                    ])
+                    ->default('news')
+                    ->required(),
+
+                Grid::make(2)
                     ->schema([
                         TextInput::make('title_uz')
                             ->label('Title (UZ)')
@@ -27,6 +36,8 @@ class NewsForm
                             ->label('Title (EN)')
                             ->required()
                             ->maxLength(255),
+
+
                     ]),
 
                 FileUpload::make('image')

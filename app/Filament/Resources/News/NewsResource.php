@@ -18,6 +18,9 @@ class NewsResource extends Resource
 {
     protected static ?string $model = News::class;
     protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-newspaper';
+    protected static ?string $navigationLabel = 'News and Announcements';
+    protected static ?string $pluralLabel = 'News and Announcements';
+    protected static ?string $label = 'News and Announcements';
 
     protected static ?int $navigationSort = 2;
     public static function form(Schema $schema): Schema

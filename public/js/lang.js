@@ -7,6 +7,7 @@ const translations = {
             members: 'A\'zolar',
             news: 'Yangiliklar',
             achievements: 'Yutuqlar',
+            collaboration: 'Hamkorlik va aloqa',
             ai_lab: "Sun’iy intellekt laboratoriyasi",
             university: "Samarqand davlat universiteti"
         },
@@ -175,7 +176,7 @@ const translations = {
             },
         },
         news: {
-            title: 'Yangiliklar va e’lonlar',
+            title: 'Yangilik va eʼlonlar',
             subtitle: 'Sun\'iy intellekt laboratoriyasidagi so\'nggi yangiliklar, tadbirlar va yutuqlar bilan tanishing',
             readMore: 'Batafsil',
             categories: {
@@ -294,6 +295,7 @@ const translations = {
             members: 'Members',
             news: 'News',
             achievements: 'Achievements',
+            collaboration: 'Collaboration and contact',
             ai_lab: "Artificial Intelligence Laboratory",
             university: "Samarkand State University"
         },
@@ -336,7 +338,7 @@ const translations = {
             },
         },
         about: {
-            title: 'About Laboratory',
+            title: 'About laboratory',
             subtitle: 'The Artificial Intelligence Laboratory at Samarkand State University is dedicated to advancing the frontiers of AI research and education.',
             mission: {
                 title: 'Our Mission',
@@ -468,7 +470,7 @@ const translations = {
             },
         },
         news: {
-            title: 'News and Announcements',
+            title: 'News and announcements',
             subtitle: 'Stay updated with the latest news, events, and achievements from our AI Laboratory',
             readMore: 'Read More',
             items: [
@@ -574,7 +576,10 @@ const translations = {
     },
 };
 
+// === Default language ===
 let currentLang = localStorage.getItem("lang") || "uz";
+
+// === Elements to be translated ===
 const langElements = [];
 
 document.querySelectorAll("[data-key], [data-key-uz], [data-key-en]").forEach(el => {
@@ -586,19 +591,45 @@ document.querySelectorAll("[data-key], [data-key-uz], [data-key-en]").forEach(el
     });
 });
 
+// === Select and Button elements ===
 const langSelect = document.getElementById("langSelect");
+const langBtn = document.getElementById("langBtn");
+const langMenu = document.getElementById("langMenu");
+const currentLangSpan = document.getElementById("currentLang");
+
+// === Select behavior ===
 if (langSelect) {
     langSelect.value = currentLang;
-    langSelect.addEventListener("change", () => changeLang(langSelect.value));
+    langSelect.addEventListener("change", () => {
+        changeLang(langSelect.value);
+        syncButtonText(langSelect.value);
+    });
 }
 
-applyLang(currentLang);
-toggleProse(currentLang);
+// === Button dropdown open/close ===
+if (langBtn && langMenu) {
+    langBtn.addEventListener("click", () => {
+        langMenu.classList.toggle("hidden");
+    });
+}
 
+// === Buttons inside dropdown ===
+document.querySelectorAll("#langMenu button").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const lang = btn.getAttribute("data-lang");
+        changeLang(lang);
+        syncButtonText(lang);
+        langMenu.classList.add("hidden");
+        if (langSelect) langSelect.value = lang;
+    });
+});
+
+// === Get translation ===
 function getTranslation(lang, keyPath) {
     return keyPath.split(".").reduce((obj, key) => obj?.[key], translations[lang]);
 }
 
+// === Apply translation ===
 function applyLang(lang) {
     langElements.forEach(item => {
         if (item[lang]) {
@@ -610,6 +641,7 @@ function applyLang(lang) {
     });
 }
 
+// === Change language ===
 function changeLang(lang) {
     currentLang = lang;
     localStorage.setItem("lang", lang);
@@ -617,6 +649,7 @@ function changeLang(lang) {
     toggleProse(lang);
 }
 
+// === Toggle prose blocks ===
 function toggleProse(lang) {
     const proseUz = document.querySelector(".prose_uz");
     const proseEn = document.querySelector(".prose_en");
@@ -631,3 +664,29 @@ function toggleProse(lang) {
         }
     }
 }
+
+// === Sync button text ===
+function syncButtonText(lang) {
+    const btn = document.querySelector(`#langMenu button[data-lang="${lang}"]`);
+    if (btn && currentLangSpan) {
+        currentLangSpan.textContent = btn.textContent;
+    }
+}
+
+// === Run on load ===
+applyLang(currentLang);
+toggleProse(currentLang);
+syncButtonText(currentLang);
+
+// === MOBILE LANGUAGE BUTTONS ===
+document.querySelectorAll(".mobile-lang-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const lang = btn.getAttribute("data-lang");
+        changeLang(lang);
+        syncButtonText(lang);
+
+        // If mobile menu is open, close it
+        const mobileMenu = document.getElementById("mobileMenu");
+        if (mobileMenu) mobileMenu.classList.add("hidden");
+    });
+});

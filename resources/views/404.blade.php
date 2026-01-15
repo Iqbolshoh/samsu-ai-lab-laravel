@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'SamSU AI Lab - Not Found')
+@section('title', 'AI Laboratory | Not Found')
 
 @section('content')
 

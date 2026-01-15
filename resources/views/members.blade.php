@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'SamSU AI Lab - Members')
+@section('title', 'AI Laboratory | Members')
 
 @section('content')
 <div class="min-h-screen pt-20 bg-gradient-to-b from-primary-50 to-white">
