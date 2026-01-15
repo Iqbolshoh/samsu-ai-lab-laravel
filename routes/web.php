@@ -6,12 +6,14 @@ use App\Models\News;
 use App\Models\Project;
 use App\Models\ProjectCategory;
 use App\Models\Activity;
+use App\Models\Banner;
 use Illuminate\Support\Facades\Route;
 
 // Home page
 Route::get('/', function () {
-    $activities = Activity::latest()->take(6)->get();
-    return view('home', compact('activities'));
+    $activities = Activity::latest()->get();
+    $banners = Banner::where('is_active', true)->orderBy('position')->get();
+    return view('home', compact('activities', 'banners'));
 });
 
 // About page

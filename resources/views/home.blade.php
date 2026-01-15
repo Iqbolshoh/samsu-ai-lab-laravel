@@ -5,57 +5,107 @@
 @section('content')
 
 <div class="min-h-screen">
-    <section
-        class="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat overflow-hidden"
-        style="
-                background-image: linear-gradient(
-                    rgba(255, 255, 255, 0.7),
-                    rgba(255, 255, 255, 0.7)
-                  ),
-                  url('preview.jpg');
-              ">
-        <div
-            class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(34,197,94,0.08),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(107,114,128,0.08),transparent_50%)]">
-        </div>
-        <div class="absolute inset-0"
-            style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%2316a34a&quot; fill-opacity=&quot;0.03&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')">
-        </div>
+    <div class="min-h-screen">
+        <section class="relative h-screen bg-primary-50 overflow-hidden">
+            <div class="swiper h-full">
+                <div class="swiper-wrapper">
+                    @foreach($banners as $index => $banner)
+                    <div class="swiper-slide">
+                        <div class="absolute inset-0">
+                            <img src="{{ $banner->image ? asset('storage/'.$banner->image) : 'https://placehold.co/1200x600?text=No+Image' }}"
+                                class="w-full h-full object-cover"
+                                alt="{{ $banner->title_uz }}">
+                            <div class="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-primary-900/60"></div>
+                        </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
-            <div class="text-center">
-                <div class="flex justify-center mb-8">
-                    <img src="/logo.jpg" alt="SAMDU AI Lab" class="h-32 w-32 rounded-xl shadow-2xl object-cover">
+                        <div class="relative h-full flex items-center">
+                            <div class="max-w-5xl mx-auto px-6 text-center">
+                                <h1
+                                    class="text-4xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-primary-700 to-primary-500 bg-clip-text text-transparent"
+                                    data-key-uz="{{ $banner->title_uz }}"
+                                    data-key-en="{{ $banner->title_en }}">
+                                </h1>
+
+                                <p class="text-lg md:text-2xl text-secondary-700 mb-10 max-w-3xl mx-auto"
+                                    data-key-uz="{{ $banner->subtitle_uz }}"
+                                    data-key-en="{{ $banner->subtitle_en }}">
+                                </p>
+
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                    @if($banner->btn1_url)
+                                    <a href="{{ $banner->btn1_url }}"
+                                        class="px-8 py-4 bg-primary-600 text-white rounded-xl font-semibold hover:bg-primary-700 transition shadow-lg"
+                                        data-key-uz="{{ $banner->btn1_text_uz }}"
+                                        data-key-en="{{ $banner->btn1_text_en }}">
+                                    </a>
+                                    @endif
+
+                                    @if($banner->btn2_url)
+                                    <a href="{{ $banner->btn2_url }}"
+                                        class="px-8 py-4 bg-white text-primary-600 border-2 border-primary-300 rounded-xl font-semibold hover:bg-primary-50 transition shadow"
+                                        data-key-uz="{{ $banner->btn2_text_uz }}"
+                                        data-key-en="{{ $banner->btn2_text_en }}">
+                                    </a>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
                 </div>
 
-                <h1 class="text-5xl md:text-7xl font-bold text-secondary-900 mb-6 leading-tight">
-                    <span data-key="home.title"></span>
-                    <span
-                        class="block bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent mt-2"
-                        data-key="home.subtitle"></span>
-                </h1>
-
-                <p class="text-xl md:text-2xl text-secondary-600 mb-10 max-w-3xl mx-auto leading-relaxed"
-                    data-key="home.description">
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/projects"
-                        class="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl flex items-center justify-center gap-2"
-                        data-key="home.exploreProjects">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                    </a>
-
-                    <a href="/about"
-                        class="px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl border-2 border-primary-200"
-                        data-key="home.learnMore">
-                    </a>
-                </div>
+                <div class="swiper-pagination text-primary-700"></div>
+                <div class="swiper-button-prev text-primary-700"></div>
+                <div class="swiper-button-next text-primary-700"></div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <style>
+            .swiper-pagination-bullet {
+                background: #dcfce7 !important;
+                opacity: 1 !important;
+            }
+
+            .swiper-pagination-bullet-active {
+                background: #16a34a !important;
+                transform: scale(1.3);
+                box-shadow: 0 0 6px rgba(22, 163, 74, 0.6);
+            }
+
+            .swiper-button-prev::after,
+            .swiper-button-next::after {
+                color: #15803d;
+                font-size: 34px;
+                font-weight: bold;
+            }
+
+            .swiper-button-prev:hover::after,
+            .swiper-button-next:hover::after {
+                color: #22c55e;
+                text-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+            }
+        </style>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+        <script>
+            const swiper = new Swiper('.swiper', {
+                autoplay: {
+                    delay: 3000,
+                },
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
+    </div>
 
     <!-- What We Do Section -->
     <section class="py-24 bg-gradient-to-b from-white to-primary-50">
@@ -131,21 +181,21 @@
 
     <!-- CTA Section -->
     <!-- <section
-                    class="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white relative overflow-hidden">
-                    <div
-                        class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.05),transparent_50%)]">
-                    </div>
-                    <div class="relative z-10">
-                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                            <h2 class="text-4xl md:text-5xl font-bold mb-6" data-key="home.cta.title"></h2>
-                            <p class="text-xl mb-10 max-w-2xl mx-auto opacity-95" data-key="home.cta.description"></p>
-                            <a href="/members"
-                                class="inline-block px-10 py-5 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-all duration-300 hover:scale-105 shadow-xl"
-                                data-key="home.cta.button">
-                            </a>
-                        </div>
-                    </div>
-                </section> -->
+        class="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.05),transparent_50%)]">
+        </div>
+        <div class="relative z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6" data-key="home.cta.title"></h2>
+                <p class="text-xl mb-10 max-w-2xl mx-auto opacity-95" data-key="home.cta.description"></p>
+                <a href="/members"
+                    class="inline-block px-10 py-5 bg-white text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-all duration-300 hover:scale-105 shadow-xl"
+                    data-key="home.cta.button">
+                </a>
+            </div>
+        </div>
+    </section> -->
 </div>
 
 @endsection
