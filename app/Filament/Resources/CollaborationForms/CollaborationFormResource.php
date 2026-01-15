@@ -2,8 +2,6 @@
 
 namespace App\Filament\Resources\CollaborationForms;
 
-use App\Filament\Resources\CollaborationForms\Pages\CreateCollaborationForm;
-use App\Filament\Resources\CollaborationForms\Pages\EditCollaborationForm;
 use App\Filament\Resources\CollaborationForms\Pages\ListCollaborationForms;
 use App\Filament\Resources\CollaborationForms\Schemas\CollaborationFormForm;
 use App\Filament\Resources\CollaborationForms\Tables\CollaborationFormsTable;
@@ -19,6 +17,13 @@ class CollaborationFormResource extends Resource
     protected static ?string $model = CollaborationForm::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+
+    public static function getNavigationBadge(): ?string
+    {
+        $count = CollaborationForm::where('is_read', false)->count();
+
+        return $count > 0 ? (string) $count : null;
+    }
 
     public static function form(Schema $schema): Schema
     {

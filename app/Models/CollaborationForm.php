@@ -13,5 +13,6 @@ class CollaborationForm extends Model
         'organization',
         'collaboration_type',
         'message',
+        'is_read'
     ];
 }

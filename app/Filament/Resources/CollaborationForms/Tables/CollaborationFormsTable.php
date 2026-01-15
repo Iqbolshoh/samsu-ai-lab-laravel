@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\CollaborationForms\Tables;
 
+use Filament\Actions\Action as ActionsAction;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\ViewAction;
 use Filament\Tables;
@@ -45,6 +46,23 @@ class CollaborationFormsTable
             ])
             ->recordActions([
                 ViewAction::make(),
+
+                ActionsAction::make('markAsRead')
+                    ->label('Read')
+                    ->icon('heroicon-o-check-circle')
+                    ->tooltip('Mark as Read')
+                    ->visible(fn($record) => !$record->is_read)
+                    ->action(fn($record) => $record->update(['is_read' => true]))
+                    ->color('success'),
+
+                ActionsAction::make('markAsUnread')
+                    ->label('Unread')
+                    ->icon('heroicon-o-arrow-path')
+                    ->tooltip('Mark as Unread')
+                    ->visible(fn($record) => $record->is_read)
+                    ->action(fn($record) => $record->update(['is_read' => false]))
+                    ->color('warning'),
+
                 DeleteAction::make(),
             ])
             ->toolbarActions([

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('organization')->nullable();
             $table->string('collaboration_type');
             $table->text('message');
+            $table->boolean('is_read')->default(false);
             $table->timestamps();
         });
     }
