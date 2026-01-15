@@ -59,16 +59,22 @@
                         </div>
 
                         <div>
-                            <label for="collaborationType" class="block text-sm font-medium text-secondary-700 mb-2" data-key="collaboration.form.fields.type"></label>
-                            <select id="collaborationType" name="collaboration_type" required
-                                class="w-full px-4 py-3 rounded-xl border border-secondary-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all duration-200 outline-none">
-                                <option value="" data-key-en="Select type" data-key-uz="Turi tanlang"></option>
-                                <option value="research" data-key-en="Research Partnership" data-key-uz="Tadqiqot hamkorligi"></option>
-                                <option value="student" data-key-en="Student Exchange" data-key-uz="Talaba almashinuvi"></option>
-                                <option value="industry" data-key-en="Industry Project" data-key-uz="Sanoat loyihasi"></option>
-                                <option value="training" data-key-en="Training Program" data-key-uz="Trening dasturi"></option>
-                                <option value="other" data-key-en="Other" data-key-uz="Boshqa"></option>
-                            </select>
+                            <label for="collaborationType"
+                                class="block text-sm font-medium text-secondary-700 mb-2"
+                                data-key="collaboration.form.fields.type">
+                            </label>
+
+                            <input
+                                type="text"
+                                id="collaborationType"
+                                name="collaboration_type"
+                                required
+                                placeholder=""
+                                data-key-en="Type of collaboration"
+                                data-key-uz="Hamkorlik turini yozing"
+                                class="w-full px-4 py-3 rounded-xl border border-secondary-300 
+                                focus:border-primary-500 focus:ring-2 focus:ring-primary-200 
+                                transition-all duration-200 outline-none">
                         </div>
 
                         <div>
@@ -216,7 +222,7 @@
                 submitBtn.disabled = true;
 
                 try {
-                    const response = await fetch('/collaboration', {
+                    const response = await fetch('/collaboration-form', {
                         method: 'POST',
                         headers: {
                             'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,

@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\About;
+use App\Models\CollaborationForm;
 use App\Models\Member;
 use App\Models\News;
 use App\Models\Project;
@@ -9,7 +10,6 @@ use App\Models\Activity;
 use App\Models\Banner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Home Page
@@ -107,13 +107,24 @@ Route::get('/collaboration', function () {
 |--------------------------------------------------------------------------
 | Handles collaboration form submission.
 */
-Route::post('/collaboration', function (Request $request) {
+Route::post('/collaboration-form', function (Request $request) {
+
+    $validated = $request->validate([
+        'first_name'         => 'required|string|max:100',
+        'last_name'          => 'required|string|max:100',
+        'email'              => 'required|email|max:150',
+        'organization'       => 'nullable|string|max:150',
+        'collaboration_type' => 'required|string|max:100',
+        'message'            => 'required|string|min:5|max:2000',
+    ]);
+
+    CollaborationForm::create($validated);
+
     return response()->json([
         'status'  => true,
-        'message' => 'Message received successfully',
-        'data'    => $request->all(),
+        'message' => 'Message received successfully'
     ]);
-});
+})->middleware('throttle:3,1');
 
 /*
 |--------------------------------------------------------------------------
