@@ -7,22 +7,39 @@ use App\Models\Project;
 use App\Models\ProjectCategory;
 use App\Models\Activity;
 use App\Models\Banner;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-// Home page
+/*
+|--------------------------------------------------------------------------
+| Home Page
+|--------------------------------------------------------------------------
+| Loads latest activities and active banners
+*/
+
 Route::get('/', function () {
     $activities = Activity::latest()->get();
     $banners = Banner::where('is_active', true)->orderBy('position')->get();
     return view('home', compact('activities', 'banners'));
 });
 
-// About page
+/*
+|--------------------------------------------------------------------------
+| About Page
+|--------------------------------------------------------------------------
+| Shows general information about the platform
+*/
 Route::get('/about', function () {
     $about = About::first();
     return view('about', compact('about'));
 });
 
-// News listing
+/*
+|--------------------------------------------------------------------------
+| News Listing Page
+|--------------------------------------------------------------------------
+| Shows paginated news with optional type filter
+*/
 Route::get('/news', function () {
     $query = News::latest();
 
@@ -34,13 +51,23 @@ Route::get('/news', function () {
     return view('news', compact('news'));
 });
 
-// News detail page
+/*
+|--------------------------------------------------------------------------
+| News Detail Page
+|--------------------------------------------------------------------------
+| Shows single news item by id
+*/
 Route::get('/news/{id}', function ($id) {
     $news = News::findOrFail($id);
     return view('news-show', compact('news'));
 });
 
-// Projects listing with optional category filter
+/*
+|--------------------------------------------------------------------------
+| Projects Listing Page
+|--------------------------------------------------------------------------
+| Shows projects with category filter
+*/
 Route::get('/projects', function () {
     $categories = ProjectCategory::orderBy('name_en')->get();
     $query = Project::with('category');
@@ -50,17 +77,50 @@ Route::get('/projects', function () {
     }
 
     $projects = $query->latest()->paginate(6);
-
     return view('projects', compact('categories', 'projects'));
 });
 
-// Members listing
+/*
+|--------------------------------------------------------------------------
+| Members Listing Page
+|--------------------------------------------------------------------------
+| Shows paginated members list
+*/
 Route::get('/members', function () {
     $members = Member::latest()->paginate(6);
     return view('members', compact('members'));
 });
 
-// Fallback for undefined routes
+/*
+|--------------------------------------------------------------------------
+| Collaboration Page
+|--------------------------------------------------------------------------
+| Shows collaboration and partnership information
+*/
+Route::get('/collaboration', function () {
+    return view('collaboration');
+});
+
+/*
+|--------------------------------------------------------------------------
+| Collaboration Form Submit (POST)
+|--------------------------------------------------------------------------
+| Handles collaboration form submission.
+*/
+Route::post('/collaboration', function (Request $request) {
+    return response()->json([
+        'status'  => true,
+        'message' => 'Message received successfully',
+        'data'    => $request->all(),
+    ]);
+});
+
+/*
+|--------------------------------------------------------------------------
+| Fallback Route
+|--------------------------------------------------------------------------
+| Handles all undefined routes
+*/
 Route::fallback(function () {
     return response()->view('404', [], 404);
 });

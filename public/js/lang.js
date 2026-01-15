@@ -5,7 +5,7 @@ const translations = {
             about: 'Biz haqimizda',
             projects: 'Loyihalar',
             members: 'A\'zolar',
-            news: 'Yangiliklar',
+            news: 'Yangilik va eʼlonlar',
             achievements: 'Yutuqlar',
             collaboration: 'Hamkorlik va aloqa',
             ai_lab: "Sun’iy intellekt laboratoriyasi",
@@ -286,6 +286,38 @@ const translations = {
             faculty_website: "Fakultet sayti",
             it_center: "IT markazi"
         },
+        collaboration: {
+            title: 'Hamkorlik va aloqa',
+            subtitle: 'Sun’iy intellekt tadqiqotlari va innovatsiyalarini rivojlantirishda birgalikda ishlaymiz',
+
+            form: {
+                title: 'Bog‘lanish',
+                subtitle: 'Hamkorlik qiziqtiryaptimi? Bizga xabar yuboring!',
+                fields: {
+                    firstName: 'Ism',
+                    lastName: 'Familiya',
+                    email: 'Elektron pochta',
+                    organization: 'Tashkilot/Muassasa',
+                    type: 'Hamkorlik turi',
+                    message: 'Xabaringiz',
+                },
+                send: 'Xabarni yuborish',
+                sending: 'Yuborilmoqda...',
+                successTitle: 'Xabar yuborildi!',
+                successMessage: 'Qiziqish bildirganingiz uchun rahmat. Tez orada siz bilan bog‘lanamiz.',
+                ok: 'OK',
+            },
+
+            contact: {
+                quick: 'Tez aloqa',
+                address: 'Manzil',
+                email: 'Elektron pochta',
+                phone: 'Telefon',
+                hours: 'Ish vaqtlari',
+                hoursDetail: 'Dushanba - Juma: 9:00 - 18:00',
+                follow: 'Bizni kuzating',
+            },
+        },
     },
     en: {
         nav: {
@@ -293,7 +325,7 @@ const translations = {
             about: 'About',
             projects: 'Projects',
             members: 'Members',
-            news: 'News',
+            news: 'News and announcements',
             achievements: 'Achievements',
             collaboration: 'Collaboration and contact',
             ai_lab: "Artificial Intelligence Laboratory",
@@ -572,6 +604,38 @@ const translations = {
             official_website: "SamSU Official Website",
             faculty_website: "Faculty Website",
             it_center: "IT Center"
+        },
+        collaboration: {
+            title: 'Collaboration and contact',
+            subtitle: 'Let’s work together to advance AI research and innovation',
+
+            form: {
+                title: 'Get In Touch',
+                subtitle: 'Interested in collaboration? Send us a message!',
+                fields: {
+                    firstName: 'First Name',
+                    lastName: 'Last Name',
+                    email: 'Email Address',
+                    organization: 'Organization/Institution',
+                    type: 'Type of Collaboration',
+                    message: 'Your Message',
+                },
+                send: 'Send Message',
+                sending: 'Sending...',
+                successTitle: 'Message Sent!',
+                successMessage: 'Thank you for your interest. We’ll get back to you soon.',
+                ok: 'OK',
+            },
+
+            contact: {
+                quick: 'Quick contact',
+                address: 'Address',
+                email: 'Email',
+                phone: 'Phone',
+                hours: 'Working Hours',
+                hoursDetail: 'Monday - Friday: 9:00 AM - 6:00 PM',
+                follow: 'Follow Us',
+            },
         },
     },
 };
