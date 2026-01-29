@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Storage;
+use Illuminate\Support\Facades\Storage;
 
 class Member extends Model
 {
@@ -14,6 +14,8 @@ class Member extends Model
         'role_en',
         'bio_uz',
         'bio_en',
+        'email',
+        'phone',
         'image',
     ];
 

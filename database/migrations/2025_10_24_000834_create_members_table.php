@@ -18,6 +18,8 @@ return new class extends Migration {
             $table->string('role_en');
             $table->text('bio_uz');
             $table->text('bio_en');
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });
