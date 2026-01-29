@@ -23,7 +23,8 @@ class DatabaseSeeder extends Seeder
             ProjectSeeder::class,
             MemberSeeder::class,
             ActivitySeeder::class,
-            ContactsSeeder::class
+            ContactsSeeder::class,
+            CollaborationSeeder::class
         ]);
     }
 }

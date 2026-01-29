@@ -14,9 +14,56 @@
     </section>
 
     <!-- Collaboration Opportunities -->
-    <section class="py-24 bg-gradient-to-b from-white to-primary-50 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!--  -->
+    <section class="py-20 bg-gradient-to-b from-white to-primary-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+                    data-key-en="Our partners"
+                    data-key-uz="Bizning hamkorlarimiz">
+                    Our partners
+                </h2>
+            </div>
+
+            <!-- Partners List - Responsive Cards -->
+            <div class="space-y-6">
+                @foreach ($collaborations as $collaboration)
+                <div class="w-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden group">
+                    <div class="flex flex-col md:flex-row">
+                        <!-- Left: Image -->
+                        <div class="md:w-1/4 lg:w-1/5 bg-gradient-to-br from-gray-50 to-white p-8 flex items-center justify-center">
+                            @if ($collaboration->image)
+                            <img src="{{ str_starts_with($collaboration->image, 'http') 
+                                    ? $collaboration->image 
+                                    : asset('storage/' . $collaboration->image) }}"
+                                alt="{{ $collaboration->title_en }}"
+                                class="max-w-full max-h-32 object-contain group-hover:scale-105 transition-transform duration-300">
+                            @else
+                            <div class="w-32 h-32 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center text-white">
+                                <span class="text-3xl font-bold">{{ substr($collaboration->title_en, 0, 1) }}</span>
+                            </div>
+                            @endif
+                        </div>
+
+                        <!-- Right: Content -->
+                        <div class="md:w-3/4 lg:w-4/5 p-8 flex flex-col justify-center">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2 md:mb-0"
+                                    data-key-en="{{ $collaboration->title_en }}"
+                                    data-key-uz="{{ $collaboration->title_uz }}">
+                                    {{ $collaboration->title_en }}
+                                </h3>
+                                <span class="inline-flex px-3 py-1 text-sm font-semibold rounded-full bg-primary-100 text-primary-700">
+                                    <span data-key-en="Collaboration Partner" data-key-uz="Hamkor tashkilot">
+                                        Collaboration partner
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
         </div>
     </section>
 

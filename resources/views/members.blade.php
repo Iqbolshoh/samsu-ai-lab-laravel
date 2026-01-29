@@ -8,14 +8,14 @@
     <section class="py-16 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.05),transparent_50%)]"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6" data-key-en="Research Team" data-key-uz="Tadqiqot Jamoa">
-                Research Team
+            <h1 class="text-5xl md:text-6xl font-bold mb-6" data-key-en="Research team" data-key-uz="Tadqiqot jamoa">
+                Research team
             </h1>
-            <p class="text-xl max-w-3xl mx-auto opacity-95 leading-relaxed"
+            <!-- <p class="text-xl max-w-3xl mx-auto opacity-95 leading-relaxed"
                 data-key-en="Meet our team of dedicated researchers and AI experts"
                 data-key-uz="Bizning sadoqatli tadqiqotchilar va AI mutaxassislarimiz bilan tanishing">
                 Meet our team of dedicated researchers and AI experts
-            </p>
+            </p> -->
         </div>
     </section>
 

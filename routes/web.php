@@ -8,6 +8,7 @@ use App\Models\Project;
 use App\Models\ProjectCategory;
 use App\Models\Activity;
 use App\Models\Banner;
+use App\Models\Collaboration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 /*
@@ -98,7 +99,8 @@ Route::get('/members', function () {
 | Shows collaboration and partnership information
 */
 Route::get('/collaboration', function () {
-    return view('collaboration');
+    $collaborations = Collaboration::all();
+    return view('collaboration', compact('collaborations'));
 });
 
 /*
