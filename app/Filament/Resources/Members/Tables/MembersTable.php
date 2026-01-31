@@ -35,6 +35,13 @@ class MembersTable
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime('d M Y')
                     ->label('Created'),
+
+                Tables\Columns\TextColumn::make('email')
+                    ->label('Email')
+                    ->searchable(),
+
+                Tables\Columns\TextColumn::make('phone')
+                    ->label('Phone'),
             ])
             ->filters([])
             ->recordActions([

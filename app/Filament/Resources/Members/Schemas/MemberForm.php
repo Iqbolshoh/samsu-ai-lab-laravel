@@ -35,6 +35,16 @@ class MemberForm
                             ->required()
                             ->maxLength(255),
 
+                        Forms\Components\TextInput::make('email')
+                            ->label('Email')
+                            ->email()
+                            ->nullable(),
+
+                        Forms\Components\TextInput::make('phone')
+                            ->label('Phone')
+                            ->tel()
+                            ->nullable(),   
+
                         Forms\Components\Textarea::make('bio_uz')
                             ->label('Bio (Uzbek)')
                             ->rows(4)

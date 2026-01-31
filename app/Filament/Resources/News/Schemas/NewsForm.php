@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\News\Schemas;
 
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
@@ -46,6 +47,13 @@ class NewsForm
                     ->image()
                     ->imageEditor()
                     ->maxSize(5120),
+
+                Textarea::make('video')
+                    ->label('Video iframe code')
+                    ->rows(4)
+                    ->placeholder('<iframe src="..."></iframe>')
+                    ->nullable()
+                    ->columnSpanFull(),
 
                 RichEditor::make('content_uz')
                     ->label('Content (UZ)')
